@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 
-// These styles apply to every route in the application
 import "./globals.css";
+import Footer from "./components/Shared/Footer";
+import Header from "./components/Shared/Header";
 
 export const metadata: Metadata = {
   title: "mna-web-programming",
@@ -15,7 +16,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

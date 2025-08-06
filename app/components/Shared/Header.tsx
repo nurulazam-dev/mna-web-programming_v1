@@ -4,7 +4,7 @@ import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import brandLogo from "../../public/images/logo/MNA-WEB-PROGRAMMING.png";
+import brandLogo from "../../../public/images/logo/MNA-WEB-PROGRAMMING.png";
 
 const navLinks = ["Home", "Services", "Portfolio", "Contact"];
 
