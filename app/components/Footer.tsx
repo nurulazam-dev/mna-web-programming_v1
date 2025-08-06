@@ -1,8 +1,9 @@
 export default function Footer() {
   return (
-    <footer className="bg-dark text-white py-6 text-center">
+    <footer className="bg-gray-800 text-white py-6 text-center">
       <p>
-        &copy; {new Date().getFullYear()} MNA Web Programming. All rights reserved.
+        &copy; {new Date().getFullYear()} MNA Web Programming. All rights
+        reserved.
       </p>
     </footer>
   );
