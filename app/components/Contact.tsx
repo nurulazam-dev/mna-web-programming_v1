@@ -36,53 +36,43 @@ export default function Contact() {
           <div className="space-y-4">
             {/* Phone Section */}
             <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                Phone
-              </h3>
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2">
                 <FaPhoneAlt className="text-primary" />
-                <span className="text-gray-700 text-md">
-                  +880 1234 567 890 (Support)
-                </span>
+                <h3 className="text-lg font-semibold text-gray-800">Phone</h3>
               </div>
-              <div className="flex items-center gap-4">
-                <FaPhoneAlt className="text-primary" />
-                <span className="text-gray-700 text-md">
-                  +880 1234 567 891 (Business)
-                </span>
-              </div>
+              <h5 className="text-gray-700 text-md ml-5">
+                +880 1234 567 890 (Support)
+              </h5>
+              <h5 className="text-gray-700 text-md ml-5">
+                +880 1234 567 891 (Business)
+              </h5>
             </div>
 
             {/* Email Section */}
             <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                Email
-              </h3>
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2">
                 <FaEnvelope className="text-primary" />
-                <span className="text-gray-700 text-md">
-                  mnawebprogramming@gmail.com
-                </span>
+                <h3 className="text-lg font-semibold text-gray-800">Email</h3>
               </div>
-              <div className="flex items-center gap-4">
-                <FaEnvelope className="text-primary" />
-                <span className="text-gray-700 text-md">
-                  nurulazam.dev@gmail.com
-                </span>
-              </div>
+              <h6 className="text-gray-700 text-md ml-6">
+                mnawebprogramming@gmail.com
+              </h6>
+              <h6 className="text-gray-700 text-md ml-6">
+                nurulazam.dev@gmail.com
+              </h6>
             </div>
 
             {/* Address Section */}
             <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                Office Address
-              </h3>
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2">
                 <FaMapMarkerAlt className="text-primary" />
-                <span className="text-gray-700 text-md">
-                  MNA Web Programming House, Raozan, Chattogram, Bangladesh.
-                </span>
+                <h3 className="text-lg font-semibold text-gray-800">
+                  Location
+                </h3>
               </div>
+              <h6 className="text-gray-700 text-md ml-6">
+                MNA Web Programming House, Raozan, Chattogram, Bangladesh.
+              </h6>
             </div>
           </div>
         </div>
