@@ -2,6 +2,7 @@ export const projects = [
   {
     title: "E-commerce Website",
     slug: "ecommerce-website",
+    shortDescription: "A modern portfolio website for an IT agency.",
     image:
       "https://nurulazam-dev.web.app/assets/dimand_web_development-xR-iwXVL.jpeg",
     description:
@@ -18,13 +19,14 @@ export const projects = [
   {
     title: "NGO Loan App",
     slug: "ngo-loan-app",
+    shortDescription: "A digital loan management app for NGOs.",
     image:
       "https://nurulazam-dev.web.app/assets/dimand_web_development-xR-iwXVL.jpeg",
     description:
       "A digital loan management app for NGOs with loan tracking, analytics, and member onboarding.",
     liveLink: "https://ngo-loan-demo.com",
     sourceCode: "https://github.com/username/ngo-loan-app",
-    techStack: ["Flutter", "Firebase", "Node.js"],
+    techStack: ["Next.js", "Mongoose", "Chakra UI", "Firebase", "Node.js"],
     highlights: [
       "Loan tracking dashboard for NGOs",
       "Member registration with KYC verification",
@@ -34,13 +36,14 @@ export const projects = [
   {
     title: "Hospital Management",
     slug: "hospital-management",
+    shortDescription: "A comprehensive hospital management system.",
     image:
       "https://nurulazam-dev.web.app/assets/dimand_web_development-xR-iwXVL.jpeg",
     description:
       "Comprehensive hospital solution with patient records, billing system, doctor scheduling, and more.",
     liveLink: "https://hospital-management-demo.com",
     sourceCode: "https://github.com/username/hospital-management",
-    techStack: ["Vue", "Laravel", "MySQL"],
+    techStack: ["React.js", "Axios", "React Router", "MongoDB", "DaisyUI"],
     highlights: [
       "Multi-role system (Admin, Doctor, Nurse, Receptionist)",
       "Secure electronic health records",

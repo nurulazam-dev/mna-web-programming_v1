@@ -1,35 +1,8 @@
-// app/components/Portfolio.tsx
 "use client";
 
 import Image from "next/image";
 import Link from "next/link";
-
-const projects = [
-  {
-    title: "E-commerce Website",
-    image:
-      "https://nurulazam-dev.web.app/assets/dimand_web_development-xR-iwXVL.jpeg",
-    slug: "ecommerce-website",
-    description:
-      "A scalable online store platform with secure payment, product filtering, and real-time order tracking.",
-  },
-  {
-    title: "NGO Loan App",
-    image:
-      "https://nurulazam-dev.web.app/assets/dimand_web_development-xR-iwXVL.jpeg",
-    slug: "ngo-loan-app",
-    description:
-      "A digital loan management app for NGOs with loan tracking, analytics, and member onboarding.",
-  },
-  {
-    title: "Hospital Management",
-    image:
-      "https://nurulazam-dev.web.app/assets/dimand_web_development-xR-iwXVL.jpeg",
-    slug: "hospital-management",
-    description:
-      "Comprehensive hospital solution with patient records, billing system, doctor scheduling, and more.",
-  },
-];
+import { projects } from "../projects/data";
 
 export default function Portfolio() {
   return (
@@ -38,7 +11,7 @@ export default function Portfolio() {
         <h2 className="text-3xl font-bold mb-6">Our Portfolio</h2>
 
         <div className="grid md:grid-cols-3 gap-8 mt-10">
-          {projects.map((project, i) => (
+          {projects?.map((project, i) => (
             <div
               key={i}
               className="rounded-xl overflow-hidden shadow hover:shadow-xl transition duration-300 bg-white flex flex-col"
@@ -55,7 +28,17 @@ export default function Portfolio() {
                   <h3 className="text-xl font-bold mb-2 text-gray-800">
                     {project.title}
                   </h3>
-                  <p className="text-gray-600 text-sm mb-4">
+                  <div className="flex flex-wrap gap-3">
+                    {project.techStack?.map((tech, idx) => (
+                      <span
+                        key={idx}
+                        className="px-4 py-1 bg-gray-200 text-sm rounded-full border border-gray-300"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  <p className="text-gray-600 text-sm mb-4 text-justify">
                     {project.description}
                   </p>
                 </div>
