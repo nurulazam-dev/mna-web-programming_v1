@@ -6,7 +6,7 @@ import { projects } from "../projects/data";
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="py-20 px-4 bg-sky-50">
+    <section id="portfolio" className="py-10 bg-sky-50">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl font-bold mb-6">Our Portfolio</h2>
 
@@ -23,9 +23,9 @@ export default function Portfolio() {
                 height={300}
                 className="w-full h-56 object-cover"
               />
-              <div className="p-6 flex flex-col justify-between flex-grow">
+              <div className="p-6 pt-2 flex flex-col justify-between flex-grow">
                 <div>
-                  <h3 className="text-xl font-bold mb-2 text-gray-800">
+                  <h3 className="text-xl font-bold mb-3 text-gray-800">
                     {project.title}
                   </h3>
                   <div className="flex flex-wrap gap-3">
