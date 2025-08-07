@@ -66,9 +66,11 @@ export default function Testimonials() {
   const containerRef = useRef(null);
 
   return (
-    <section className="py-20 px-4 bg-sky-50" id="testimonials">
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-10">What Our Clients Say</h2>
+    <section className="py-5 px-4 bg-sky-50" id="testimonials">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-3xl font-bold mb-10 text-center text-gray-800">
+          What Our Clients Say
+        </h2>
         <div className="overflow-hidden relative">
           <motion.div
             className="flex gap-6"
@@ -79,10 +81,11 @@ export default function Testimonials() {
             {testimonials.concat(testimonials).map((t, i) => (
               <div
                 key={i}
-                className="relative bg-[#1e1e1e] text-white rounded-xl px-6 py-6 shadow-lg hover:border-l-[6px] hover:border-red-500"
+                // className="relative bg-[#1e1e1e] text-white rounded-xl px-6 py-6 shadow-lg hover:border-l-[6px] hover:border-red-500"
+                className="relative w-[360px] min-h-[240px] bg-[#1e1e1e] text-white rounded-xl px-4 py-6 shadow-lg border-l-[3px] border-red-500 flex-shrink-0"
               >
                 {/* Avatar and Header */}
-                <div className="flex items-center gap-4 mb-4">
+                <div className="flex items-center gap-1 my-5">
                   <Image
                     src={t?.image}
                     alt="Mohammed Nurul Islam Khan"
@@ -99,7 +102,7 @@ export default function Testimonials() {
                 </div>
 
                 {/* Feedback */}
-                <p className="text-gray-300 leading-relaxed text-sm">
+                <p className="text-gray-400 leading-relaxed text-sm text-justify">
                   {t?.feedback}
                 </p>
 
@@ -111,7 +114,6 @@ export default function Testimonials() {
                     <FaStar />
                     <FaStar />
                     <FaRegStarHalfStroke />
-                    <div className="absolute -bottom-2 right-0 w-0 h-0 border-l-[10px] border-l-red-500 border-t-[10px] border-t-transparent"></div>
                   </div>
                 </div>
               </div>
