@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { FaStar, FaRegStarHalfStroke } from "react-icons/fa6";
 import Image from "next/image";
 
@@ -62,7 +62,7 @@ const scrollVariants = {
   },
 };
 
-export default function Testimonials() {
+const Testimonials = () => {
   const containerRef = useRef(null);
 
   return (
@@ -81,10 +81,8 @@ export default function Testimonials() {
             {testimonials.concat(testimonials).map((t, i) => (
               <div
                 key={i}
-                // className="relative bg-[#1e1e1e] text-white rounded-xl px-6 py-6 shadow-lg hover:border-l-[6px] hover:border-red-500"
                 className="relative w-[360px] min-h-[240px] bg-[#1e1e1e] text-white rounded-xl px-4 py-6 shadow-lg border-l-[3px] border-red-500 flex-shrink-0"
               >
-                {/* Avatar and Header */}
                 <div className="flex items-center gap-1 my-5">
                   <Image
                     src={t?.image}
@@ -123,4 +121,6 @@ export default function Testimonials() {
       </div>
     </section>
   );
-}
+};
+
+export default Testimonials;
