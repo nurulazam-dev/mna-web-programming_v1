@@ -1,3 +1,4 @@
+import AboutUs from "./components/AboutUs";
 import Blog from "./components/Blog";
 import Contact from "./components/Contact";
 import FAQ from "./components/FAQ";
@@ -13,6 +14,7 @@ export default function HomePage() {
       <Services />
       <Portfolio />
       <Testimonials />
+      <AboutUs />
       <FAQ />
       <Blog />
       <Contact />
