@@ -198,12 +198,12 @@ const TechnologyWeUse = () => {
       </h2>
 
       <div className="space-y-12 max-w-6xl mx-auto">
-        {categories.map((category) => (
+        {categories?.map((category) => (
           <div
             key={category}
             className="border border-blue-800 bg-[#101930] rounded-xl shadow-md p-6"
           >
-            <div className="bg-blue-800 text-white inline-block px-4 py-1 rounded-t-md mb-4 font-semibold">
+            <div className="bg-blue-800 text-white inline-block px-4 py-1 rounded-t-md  font-semibold mb-4">
               {category} Technology
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
