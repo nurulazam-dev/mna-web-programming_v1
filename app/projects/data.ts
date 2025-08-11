@@ -2,6 +2,7 @@ export const projects = [
   {
     title: "E-commerce Website",
     slug: "ecommerce-website",
+    category: "Full Stack",
     shortDescription: "A modern portfolio website for an IT agency.",
     image:
       "https://nurulazam-dev.web.app/assets/dimand_web_development-xR-iwXVL.jpeg",
@@ -19,6 +20,7 @@ export const projects = [
   {
     title: "NGO Loan App",
     slug: "ngo-loan-app",
+    category: "Frontend",
     shortDescription: "A digital loan management app for NGOs.",
     image:
       "https://nurulazam-dev.web.app/assets/dimand_web_development-xR-iwXVL.jpeg",
@@ -36,6 +38,7 @@ export const projects = [
   {
     title: "Hospital Management",
     slug: "hospital-management",
+    category: "Full Stack",
     shortDescription: "A comprehensive hospital management system.",
     image:
       "https://nurulazam-dev.web.app/assets/dimand_web_development-xR-iwXVL.jpeg",
