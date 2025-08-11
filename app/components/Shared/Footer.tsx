@@ -10,7 +10,9 @@ import {
   FaYoutube,
   FaTiktok,
 } from "react-icons/fa";
+import brandLogo from "../../../public/images/logo/MNA-WEB-PROGRAMMING.png";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -26,7 +28,14 @@ const Footer = () => {
       >
         {/* Brand Overview */}
         <div>
-          <h2 className="text-2xl font-bold text-white mb-4">
+          <Image
+            src={brandLogo.src}
+            alt="MNA Web Programming Logo"
+            height={140}
+            width={140}
+            className="w-36 h-auto bg-white px-[6px] py-[4px] rounded"
+          />
+          <h2 className="text-xl font-bold text-white mb-2">
             MNA Web Programming
           </h2>
           <p className="text-sm text-gray-400 leading-6">
