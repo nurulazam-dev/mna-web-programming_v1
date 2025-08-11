@@ -5,6 +5,7 @@ import { FiMenu, FiX } from "react-icons/fi";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import brandLogo from "../../../public/images/logo/MNA-WEB-PROGRAMMING.png";
+import Link from "next/link";
 
 const navLinks = ["Home", "Services", "Portfolio", "Contact"];
 
@@ -15,12 +16,14 @@ export default function Header() {
     <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
       <div className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
         <div>
-          <Image
-            src={brandLogo}
-            alt="MNA Web Programming Logo"
-            width={130}
-            height={130}
-          />
+          <Link href={`/`}>
+            <Image
+              src={brandLogo}
+              alt="MNA Web Programming Logo"
+              width={130}
+              height={130}
+            />
+          </Link>
         </div>
         <nav className="hidden md:flex space-x-6">
           {navLinks?.map((link, idx) => (

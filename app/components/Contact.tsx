@@ -23,8 +23,12 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="relative py-20 px-6 bg-gradient-to-b from-[#050d1a] to-[#0a1629] text-white"
+      className="relative p-10 bg-gradient-to-b from-[#050d1a] to-[#0a1629] text-white"
     >
+      <h2 className="text-4xl font-bold leading-snug text-center mb-7">
+        Let’s <span className="text-cyan-400">Connect</span> & Build Something
+        Amazing
+      </h2>
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
         {/* Left: Contact Info */}
         <motion.div
@@ -32,19 +36,15 @@ const Contact = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="space-y-8"
+          className="space-y-7"
         >
-          <h2 className="text-4xl font-bold leading-snug">
-            Let’s <span className="text-cyan-400">Connect</span> & Build
-            Something Amazing
-          </h2>
-          <p className="text-gray-300 max-w-lg">
+          <p className="text-gray-300 text-justify max-w-lg">
             We specialize in Web Design, Development, App Solutions, and
             Teaching Platforms. Whether it’s a project inquiry or just a
             friendly hello — we’re always listening.
           </p>
 
-          <div className="space-y-6">
+          <div className="space-y-5">
             {/* Phone */}
             <div className="flex items-center gap-4 bg-white/10 p-4 rounded-xl backdrop-blur-md hover:bg-white/20 transition">
               <div className="p-4 bg-gradient-to-tr from-cyan-400 to-blue-500 rounded-full">
@@ -90,7 +90,7 @@ const Contact = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="bg-white/10 backdrop-blur-lg p-8 rounded-2xl shadow-lg"
+          className="bg-white/10 backdrop-blur-lg p-8 rounded shadow-lg"
         >
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Name */}
@@ -100,7 +100,7 @@ const Contact = () => {
                 type="text"
                 placeholder="Your Name"
                 required
-                className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 text-white placeholder-gray-400"
+                className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/20 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-400 text-white placeholder-gray-400"
               />
             </div>
 
@@ -111,7 +111,7 @@ const Contact = () => {
                 type="email"
                 placeholder="Your Email"
                 required
-                className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 text-white placeholder-gray-400"
+                className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/20 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-400 text-white placeholder-gray-400"
               />
             </div>
 
@@ -121,14 +121,14 @@ const Contact = () => {
                 rows={5}
                 placeholder="Your Message"
                 required
-                className="w-full p-4 bg-white/5 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 text-white placeholder-gray-400"
+                className="w-full p-4 bg-white/5 border border-white/20 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-400 text-white placeholder-gray-400"
               ></textarea>
             </div>
 
             {/* Button */}
             <button
               type="submit"
-              className="w-full py-3 rounded-lg text-lg font-semibold bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 transition shadow-lg shadow-cyan-500/30"
+              className="w-full py-3 rounded-md text-lg font-semibold bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 transition shadow-lg shadow-cyan-500/30"
             >
               Send Message
             </button>

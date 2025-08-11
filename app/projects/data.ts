@@ -10,6 +10,7 @@ export const projects = [
       "A scalable online store platform with secure payment, product filtering, and real-time order tracking.",
     liveLink: "https://ecommerce-demo.com",
     sourceCode: "https://github.com/username/ecommerce-website",
+    videoLink: "https://www.youtube.com/watch?v=example",
     techStack: ["React", "Next.js", "Tailwind CSS", "Firebase", "Stripe"],
     highlights: [
       "User-friendly UI/UX for buyers and admins",
@@ -28,6 +29,7 @@ export const projects = [
       "A digital loan management app for NGOs with loan tracking, analytics, and member onboarding.",
     liveLink: "https://ngo-loan-demo.com",
     sourceCode: "https://github.com/username/ngo-loan-app",
+    videoLink: "https://www.youtube.com/watch?v=example",
     techStack: ["Next.js", "Mongoose", "Chakra UI", "Firebase", "Node.js"],
     highlights: [
       "Loan tracking dashboard for NGOs",
@@ -46,6 +48,7 @@ export const projects = [
       "Comprehensive hospital solution with patient records, billing system, doctor scheduling, and more.",
     liveLink: "https://hospital-management-demo.com",
     sourceCode: "https://github.com/username/hospital-management",
+    videoLink: "https://www.youtube.com/watch?v=example",
     techStack: ["React.js", "Axios", "React Router", "MongoDB", "DaisyUI"],
     highlights: [
       "Multi-role system (Admin, Doctor, Nurse, Receptionist)",
