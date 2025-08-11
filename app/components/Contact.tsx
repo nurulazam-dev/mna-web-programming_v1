@@ -21,10 +21,7 @@ const Contact = () => {
   };
 
   return (
-    <section
-      id="contact"
-      className="relative p-10 bg-gradient-to-b from-[#050d1a] to-[#0a1629] text-white"
-    >
+    <section id="contact" className="relative p-10">
       <h2 className="text-4xl font-bold leading-snug text-center mb-7">
         Let’s <span className="text-cyan-400">Connect</span> & Build Something
         Amazing

@@ -192,7 +192,7 @@ const categories = ["Frontend", "Backend", "Tools"];
 
 const TechnologyWeUse = () => {
   return (
-    <div className="py-16 px-4 bg-gradient-to-b from-[#040b1a] to-[#0a0f1f] text-white">
+    <div className="py-16 px-4">
       <h2 className="text-4xl font-bold text-center mb-12">
         Our Technology <span className="text-cyan-400">and Tools</span>
       </h2>

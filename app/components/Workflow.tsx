@@ -63,7 +63,7 @@ const workflowSteps = [
 
 const Workflow = () => {
   return (
-    <section className="py-16 px-6 bg-gradient-to-b from-[#040b1a] to-[#0a0f1f] text-white">
+    <section className="py-16 px-6">
       <h2 className="text-4xl font-bold text-center mb-12">
         Process <span className="text-cyan-400">We Follow</span>
       </h2>

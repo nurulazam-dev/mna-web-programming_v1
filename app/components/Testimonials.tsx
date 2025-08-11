@@ -66,7 +66,7 @@ const Testimonials = () => {
   const containerRef = useRef(null);
 
   return (
-    <section className="py-5 px-4 bg-sky-50" id="testimonials">
+    <section className="py-5 px-4" id="testimonials">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold mb-10 text-center text-gray-800">
           What Our Clients Say

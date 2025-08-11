@@ -21,12 +21,9 @@ const posts = [
 
 const Blog = () => {
   return (
-    <section
-      className="py-20 px-4 bg-gradient-to-b from-sky-100 to-white"
-      id="blog"
-    >
+    <section className="py-20 px-4" id="blog">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-extrabold text-center mb-12 text-gray-800">
+        <h2 className="text-4xl font-extrabold text-center mb-12 text-slate-50">
           📚 Our Latest Blog Posts
         </h2>
 

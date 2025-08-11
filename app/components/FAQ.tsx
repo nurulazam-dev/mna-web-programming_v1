@@ -39,10 +39,7 @@ const FAQ = () => {
     setActiveIndex(activeIndex === index ? null : index);
 
   return (
-    <section
-      id="faq"
-      className="py-20 px-6 bg-gradient-to-b from-[#050d1a] to-[#0a1629] text-white relative"
-    >
+    <section id="faq" className="py-20 px-6 relative">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-4xl font-bold text-center mb-4">
           Frequently Asked <span className="text-cyan-400">Questions</span>

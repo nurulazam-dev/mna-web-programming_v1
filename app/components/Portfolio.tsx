@@ -25,10 +25,7 @@ export default function Portfolio() {
   const handleSeeMore = () => setVisibleCount((prev) => prev + 3);
 
   return (
-    <section
-      id="portfolio"
-      className="py-20 bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800"
-    >
+    <section id="portfolio" className="py-20">
       <div className="max-w-7xl mx-auto text-center px-4">
         {/* Heading */}
         <h2 className="text-4xl font-extrabold mb-4 text-gray-900 dark:text-white">

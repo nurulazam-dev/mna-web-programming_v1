@@ -26,10 +26,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section
-      id="services"
-      className="py-20 px-6 bg-gradient-to-b from-[#040b1a] to-[#0a0f1f] text-white"
-    >
+    <section id="services" className="py-20 px-6">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl font-bold mb-4">
           Our <span className="text-cyan-400">Services</span>
