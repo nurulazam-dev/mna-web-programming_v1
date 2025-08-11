@@ -3,9 +3,27 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { FaCheckCircle, FaPlay } from "react-icons/fa";
-import heroImage from "../../public/images/logo/MNA-WEB-PROGRAMMING.png";
+// import heroImage from "../../public/images/logo/MNA-WEB-PROGRAMMING.png";
+import heroImage from "../../public/images/logo/MNA-Web-Programming-logo.png";
+import ParticleView from "./ParticleView";
 
 const Hero = () => {
+  const customCss = `
+   
+    @property --angle {
+      syntax: '<angle>';
+      initial-value: 0deg;
+      inherits: false;
+    }
+
+   
+    @keyframes shimmer-spin {
+      to {
+        --angle: 360deg;
+      }
+    }
+  `;
+
   return (
     <section
       id="home"
@@ -63,12 +81,22 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4 pt-4">
-            <a
-              href="#contact"
-              className="bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white font-medium px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition"
-            >
-              Get Free Consultation
-            </a>
+            <div className="flex items-center justify-center font-sans">
+              <style>{customCss}</style>
+              <button className="relative inline-flex items-center justify-center p-[1.5px] bg-sky-600 dark:bg-black rounded-lg overflow-hidden group">
+                <div
+                  className="absolute inset-0"
+                  style={{
+                    background:
+                      "conic-gradient(from var(--angle), transparent 25%, #06b6d4, transparent 50%)",
+                    animation: "shimmer-spin 2.5s linear infinite",
+                  }}
+                />
+                <span className="relative z-10 inline-flex items-center justify-center w-full h-full px-8 py-3 bg-slate-900 hover:to-blue-700 text-white  rounded-lg transition-colors duration-300">
+                  Get Free Consultation
+                </span>
+              </button>
+            </div>
             <a
               href="#portfolio"
               className="flex items-center gap-2 border border-sky-500 text-sky-600 hover:bg-sky-50 px-6 py-3 rounded-lg font-medium transition"
@@ -83,17 +111,29 @@ const Hero = () => {
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex justify-center relative"
+          // className="flex justify-center relative"
         >
-          <div className="absolute inset-0 bg-gradient-to-tr from-sky-200 via-transparent to-transparent rounded-full blur-3xl opacity-40" />
-          <Image
+          <div className="mb-2 flex justify-center">
+            <Image
+              src={heroImage}
+              alt="Hero Banner"
+              width={220}
+              height={220}
+              // className="relative z-10 rounded-2xl shadow-2xl object-cover"
+              priority
+            />
+          </div>
+          <ParticleView />
+          {/* <div className="absolute inset-0 bg-gradient-to-tr from-sky-200 via-transparent to-transparent rounded-full blur-3xl opacity-40" />
+            <Image
             src={heroImage}
             alt="Hero Banner"
             width={520}
             height={520}
             className="relative z-10 rounded-2xl shadow-2xl object-cover"
             priority
-          />
+          /> 
+          <ParticleView /> */}
         </motion.div>
       </div>
     </section>
