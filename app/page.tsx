@@ -7,6 +7,7 @@ import Portfolio from "./components/Portfolio";
 import Services from "./components/Services";
 import TechnologyWeUse from "./components/TechnologyWeUse";
 import Testimonials from "./components/Testimonials";
+import Workflow from "./components/Workflow";
 
 export default function HomePage() {
   return (
@@ -15,6 +16,7 @@ export default function HomePage() {
       <Services />
       <TechnologyWeUse />
       <Portfolio />
+      <Workflow />
       <Testimonials />
       <AboutUs />
       <FAQ />
