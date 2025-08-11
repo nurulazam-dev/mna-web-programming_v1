@@ -13,13 +13,13 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
-      <div className="max-w-6xl mx-auto px-4 py-2 flex justify-between items-center">
+      <div className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
         <div>
           <Image
             src={brandLogo}
             alt="MNA Web Programming Logo"
-            width={120}
-            height={120}
+            width={130}
+            height={130}
           />
         </div>
         <nav className="hidden md:flex space-x-6">
