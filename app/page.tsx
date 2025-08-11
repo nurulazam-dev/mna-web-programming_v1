@@ -8,11 +8,13 @@ import Services from "./components/Services";
 import TechnologyWeUse from "./components/TechnologyWeUse";
 import Testimonials from "./components/Testimonials";
 import Workflow from "./components/Workflow";
+import WhyWeAre from "./components/WhyWeAre";
 
 export default function HomePage() {
   return (
     <main>
       <Hero />
+      <WhyWeAre />
       <Services />
       <TechnologyWeUse />
       <Portfolio />
