@@ -2,8 +2,10 @@
 
 import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt, FaUser } from "react-icons/fa";
 import Swal from "sweetalert2";
+import React from "react";
+import { motion } from "framer-motion";
 
-export default function Contact() {
+const Contact = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     Swal.fire({
@@ -19,109 +21,122 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-10 px-4">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        {/* Left Side: Contact Info */}
-        <div className="space-y-6">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">Let’s Talk</h2>
-          <p className="text-gray-600 mb-4 text-justify">
-            We specialize in Web Design, Web Development, App Development, and
-            provide an Online Web Development Teaching Platform. Whether you
-            need a service or just want to connect — we’re here for you.
+    <section
+      id="contact"
+      className="relative py-20 px-6 bg-gradient-to-b from-[#050d1a] to-[#0a1629] text-white"
+    >
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+        {/* Left: Contact Info */}
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="space-y-8"
+        >
+          <h2 className="text-4xl font-bold leading-snug">
+            Let’s <span className="text-cyan-400">Connect</span> & Build
+            Something Amazing
+          </h2>
+          <p className="text-gray-300 max-w-lg">
+            We specialize in Web Design, Development, App Solutions, and
+            Teaching Platforms. Whether it’s a project inquiry or just a
+            friendly hello — we’re always listening.
           </p>
 
-          <div className="space-y-4">
-            {/* Phone Section */}
-            <div className="flex items-center gap-2">
-              <div className="text-3xl bg-blue-100 p-3 rounded-full mr-2">
-                <FaPhoneAlt className="text-primary" />
+          <div className="space-y-6">
+            {/* Phone */}
+            <div className="flex items-center gap-4 bg-white/10 p-4 rounded-xl backdrop-blur-md hover:bg-white/20 transition">
+              <div className="p-4 bg-gradient-to-tr from-cyan-400 to-blue-500 rounded-full">
+                <FaPhoneAlt className="text-white text-xl" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-800">Phone:</h3>
-
-                <h5 className="text-gray-700 text-md5">
-                  +880 1234 567 890 (Support)
-                </h5>
-                <h5 className="text-gray-700 text-md">
-                  +880 1234 567 891 (Business)
-                </h5>
+                <h4 className="font-semibold text-lg">Phone</h4>
+                <p className="text-gray-300">+880 1234 567 890 (Support)</p>
+                <p className="text-gray-300">+880 1234 567 891 (Business)</p>
               </div>
             </div>
 
-            {/* Email Section */}
-            <div className="flex items-center gap-2">
-              <div className="text-3xl bg-blue-100 p-3 rounded-full mr-2">
-                <FaEnvelope className="text-primary" />
+            {/* Email */}
+            <div className="flex items-center gap-4 bg-white/10 p-4 rounded-xl backdrop-blur-md hover:bg-white/20 transition">
+              <div className="p-4 bg-gradient-to-tr from-pink-400 to-red-500 rounded-full">
+                <FaEnvelope className="text-white text-xl" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-800">Email:</h3>
-                <h6 className="text-gray-700 text-md">
-                  mnawebprogramming@gmail.com
-                </h6>
-                <h6 className="text-gray-700 text-md">
-                  nurulazam.dev@gmail.com
-                </h6>
+                <h4 className="font-semibold text-lg">Email</h4>
+                <p className="text-gray-300">mnawebprogramming@gmail.com</p>
+                <p className="text-gray-300">nurulazam.dev@gmail.com</p>
               </div>
             </div>
 
-            {/* Address Section */}
-            <div className="flex items-center gap-2">
-              <div className="text-3xl bg-blue-100 p-3 rounded-full mr-2">
-                <FaMapMarkerAlt className="text-primary" />
+            {/* Address */}
+            <div className="flex items-center gap-4 bg-white/10 p-4 rounded-xl backdrop-blur-md hover:bg-white/20 transition">
+              <div className="p-4 bg-gradient-to-tr from-green-400 to-emerald-500 rounded-full">
+                <FaMapMarkerAlt className="text-white text-xl" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-800">
-                  Location:
-                </h3>
-                <h6 className="text-gray-700 text-md">
+                <h4 className="font-semibold text-lg">Location</h4>
+                <p className="text-gray-300">
                   MNA Web Programming House, Raozan, Chattogram, Bangladesh.
-                </h6>
+                </p>
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        {/* Right Side: Contact Form */}
-        <div className="bg-white p-8 shadow-xl">
-          <form onSubmit={handleSubmit} className="space-y-5">
+        {/* Right: Contact Form */}
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="bg-white/10 backdrop-blur-lg p-8 rounded-2xl shadow-lg"
+        >
+          <form onSubmit={handleSubmit} className="space-y-6">
+            {/* Name */}
             <div className="relative">
-              <FaUser className="absolute top-4.5 left-3 text-gray-400" />
+              <FaUser className="absolute top-4 left-3 text-gray-400" />
               <input
                 type="text"
                 placeholder="Your Name"
                 required
-                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 text-white placeholder-gray-400"
               />
             </div>
 
+            {/* Email */}
             <div className="relative">
-              <FaEnvelope className="absolute top-4.5 left-3 text-gray-400" />
+              <FaEnvelope className="absolute top-4 left-3 text-gray-400" />
               <input
                 type="email"
                 placeholder="Your Email"
                 required
-                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 text-white placeholder-gray-400"
               />
             </div>
 
+            {/* Message */}
             <div>
               <textarea
                 rows={5}
                 placeholder="Your Message"
                 required
-                className="w-full p-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                className="w-full p-4 bg-white/5 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 text-white placeholder-gray-400"
               ></textarea>
             </div>
 
+            {/* Button */}
             <button
               type="submit"
-              className="hover:bg-slate-800 text-white px-6 py-3 rounded bg-sky-600 transition w-full"
+              className="w-full py-3 rounded-lg text-lg font-semibold bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 transition shadow-lg shadow-cyan-500/30"
             >
               Send Message
             </button>
           </form>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
-}
+};
+
+export default Contact;
