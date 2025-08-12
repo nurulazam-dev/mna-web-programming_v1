@@ -41,16 +41,29 @@ const FAQ = () => {
   return (
     <section id="faq" className="py-10 px-6 relative">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-4">
+        <motion.h2
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-4xl font-extrabold mb-4 text-center"
+        >
           Frequently Asked <span className="text-cyan-400">Questions</span>
-        </h2>
-        <p className="text-gray-400 text-center max-w-2xl mx-auto mb-12">
+        </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="text-gray-300 max-w-2xl mx-auto mb-6 text-center"
+        >
           Here are some of the most common questions our clients ask. If you
           have more, feel free to contact us anytime.
-        </p>
+        </motion.p>
 
         <div className="space-y-5">
-          {faqs.map((faq, i) => (
+          {faqs?.map((faq, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 20 }}
