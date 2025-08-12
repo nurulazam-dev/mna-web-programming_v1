@@ -32,7 +32,7 @@ const features = [
 
 const WhyWeAre = () => {
   return (
-    <section className="relative py-20 px-6 text-white overflow-hidden">
+    <section className="relative py-10 px-6 text-white overflow-hidden">
       {/* Background Glow */}
       {/* <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.05),transparent)]"></div> */}
 
@@ -42,9 +42,9 @@ const WhyWeAre = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-4xl font-extrabold mb-6"
+          className="text-4xl font-extrabold mb-4"
         >
-          🚀 Why We Are Different
+          Why We Are Different
         </motion.h2>
 
         <motion.p
@@ -52,7 +52,7 @@ const WhyWeAre = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="text-gray-300 max-w-2xl mx-auto mb-14"
+          className="text-gray-300 max-w-2xl mx-auto mb-6"
         >
           We are not just another agency. We’re a team of passionate innovators,
           problem solvers, and storytellers who thrive on helping brands grow.

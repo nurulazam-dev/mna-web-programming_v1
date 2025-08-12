@@ -26,7 +26,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-20 px-6">
+    <section id="services" className="py-10 px-6">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl font-bold mb-4">
           Our <span className="text-cyan-400">Services</span>
@@ -36,7 +36,7 @@ const Services = () => {
           needs.
         </p>
 
-        <div className="grid md:grid-cols-3 gap-10 mt-14">
+        <div className="grid md:grid-cols-3 gap-10 mt-6">
           {services.map((service, i) => (
             <motion.div
               key={i}

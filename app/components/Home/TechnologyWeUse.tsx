@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import {
   FaReact,
   FaNodeJs,
@@ -192,11 +195,28 @@ const categories = ["Frontend", "Backend", "Tools"];
 
 const TechnologyWeUse = () => {
   return (
-    <div className="py-16 px-4">
-      <h2 className="text-4xl font-bold text-center mb-12">
+    <div className="py-10 px-6">
+      <motion.h2
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-4xl font-extrabold mb-4 text-center"
+      >
         Our Technology <span className="text-cyan-400">and Tools</span>
-      </h2>
+      </motion.h2>
 
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        viewport={{ once: true }}
+        className="text-gray-300 max-w-2xl mx-auto mb-6 text-center"
+      >
+        We leverage a wide range of modern technologies and tools to build
+        scalable, efficient, and user-friendly applications. Here’s a glimpse of
+        what we use:
+      </motion.p>
       <div className="space-y-12 max-w-6xl mx-auto">
         {categories?.map((category) => (
           <div

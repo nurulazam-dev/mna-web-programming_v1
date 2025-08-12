@@ -55,7 +55,7 @@ const posts = [
 
 const Blog = () => {
   return (
-    <section className="py-20 px-4" id="blog">
+    <section className="py-10 px-6" id="blog">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-14 text-white tracking-tight">
           📚 Our Latest Blog Posts

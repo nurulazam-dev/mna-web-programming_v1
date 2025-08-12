@@ -21,7 +21,7 @@ const ContactUs = () => {
   };
 
   return (
-    <section id="contact" className="relative p-10">
+    <section id="contact" className="relative py-10 px-6">
       <h2 className="text-4xl font-bold leading-snug text-center mb-7">
         Let’s <span className="text-cyan-400">Connect</span> & Build Something
         Amazing

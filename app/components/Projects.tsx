@@ -25,19 +25,32 @@ const Projects = () => {
   const handleSeeMore = () => setVisibleCount((prev) => prev + 3);
 
   return (
-    <section id="projects" className="py-20">
-      <div className="max-w-7xl mx-auto text-center px-4">
+    <section id="projects" className="py-10 px-6">
+      <div className="max-w-7xl mx-auto text-center">
         {/* Heading */}
-        <h2 className="text-4xl font-extrabold mb-4 text-gray-900 dark:text-white">
+        <motion.h2
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-4xl font-extrabold mb-4"
+        >
           Explore Our Works
-        </h2>
-        <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-12">
+        </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="text-gray-300 max-w-2xl mx-auto mb-6"
+        >
           Explore our latest projects — from full-stack apps to sleek front-end
           designs, crafted with precision and passion.
-        </p>
+        </motion.p>
 
         {/* Filter Tabs */}
-        <div className="flex justify-center gap-4 flex-wrap mb-14">
+        <div className="flex justify-center gap-4 flex-wrap mb-6">
           {categories?.map((cat) => (
             <button
               key={cat}
