@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 import React from "react";
 import { motion } from "framer-motion";
 
-const Contact = () => {
+const ContactUs = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     Swal.fire({
@@ -136,4 +136,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactUs;

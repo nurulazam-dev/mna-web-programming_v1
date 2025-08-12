@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import brandLogo from "../../../public/images/logo/MNA-WEB-PROGRAMMING.png";
 
-const navLinks = ["Home", "Services", "Portfolio", "About", "Contact"];
+const navLinks = ["Home", "Projects", "About Us", "Contact Us"];
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,7 +57,7 @@ const Header = () => {
             <motion.a
               key={idx}
               // href={`#${link.toLowerCase()}`}
-              href={`/${link.toLowerCase()}`}
+              href={`/${link.replace(/[^a-zA-Z0-9]+/g, "-").toLowerCase()}`}
               className="relative text-gray-800 dark:text-gray-200 font-medium group"
             >
               {link}

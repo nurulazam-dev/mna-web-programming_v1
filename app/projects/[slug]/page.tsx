@@ -10,7 +10,7 @@ import {
   FaCode,
 } from "react-icons/fa";
 import Link from "next/link";
-import { projectsData } from "../projectDataBank";
+import { projectsData } from "../../../public/data/projectDataBank";
 
 type Props = {
   params: {
@@ -109,7 +109,7 @@ export default function ProjectDetails({ params }: Props) {
         {/* Technologies */}
         <div className="mb-10">
           <h3 className="text-2xl font-semibold mb-4 text-gray-900">
-            🛠️ Technologies Used:
+            Technologies Used:
           </h3>
           <div className="flex flex-wrap gap-3">
             {project?.techStack?.map((tech, idx) => (
@@ -126,7 +126,7 @@ export default function ProjectDetails({ params }: Props) {
         {/* Highlights */}
         <div className="bg-white rounded-2xl shadow-md p-6 lg:p-10 mb-10">
           <h3 className="text-2xl font-semibold mb-4 text-gray-900">
-            ✨ Key Highlights:
+            Key Highlights:
           </h3>
           <ul className="space-y-3 text-gray-700 text-lg">
             {project?.highlights?.map((point, idx) => (

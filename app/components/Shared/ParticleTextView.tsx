@@ -89,8 +89,8 @@ const ParticleText: React.FC<ParticleTextProps> = ({
   );
 };
 
-const ParticleView: React.FC = () => {
+const ParticleTextView: React.FC = () => {
   return <ParticleText />;
 };
 
-export default ParticleView;
+export default ParticleTextView;

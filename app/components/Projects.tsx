@@ -5,11 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
-import { projectsData } from "../projects/projectDataBank";
+import { projectsData } from "../../public/data/projectDataBank";
 
 const categories = ["All", "Full Stack", "Frontend", "Backend"];
 
-export default function Portfolio() {
+const Projects = () => {
   const [visibleCount, setVisibleCount] = useState(6);
   const [activeCategory, setActiveCategory] = useState("All");
 
@@ -25,11 +25,11 @@ export default function Portfolio() {
   const handleSeeMore = () => setVisibleCount((prev) => prev + 3);
 
   return (
-    <section id="portfolio" className="py-20">
+    <section id="projects" className="py-20">
       <div className="max-w-7xl mx-auto text-center px-4">
         {/* Heading */}
         <h2 className="text-4xl font-extrabold mb-4 text-gray-900 dark:text-white">
-          ✨ Our Portfolio
+          Explore Our Works
         </h2>
         <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-12">
           Explore our latest projects — from full-stack apps to sleek front-end
@@ -172,4 +172,6 @@ export default function Portfolio() {
       </div>
     </section>
   );
-}
+};
+
+export default Projects;

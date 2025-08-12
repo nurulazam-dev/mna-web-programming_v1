@@ -1,14 +1,14 @@
 import AboutUs from "./components/AboutUs";
 import Blog from "./components/Blog";
-import Contact from "./components/Contact";
-import FAQ from "./components/FAQ";
-import Hero from "./components/Hero";
-import Portfolio from "./components/Portfolio";
-import Services from "./components/Services";
-import TechnologyWeUse from "./components/TechnologyWeUse";
-import Testimonials from "./components/Testimonials";
-import Workflow from "./components/Workflow";
-import WhyWeAre from "./components/WhyWeAre";
+import ContactUs from "./components/ContactUs";
+import FAQ from "./components/Home/FAQ";
+import Hero from "./components/Home/Hero";
+import Portfolio from "./components/Projects";
+import Services from "./components/Home/Services";
+import TechnologyWeUse from "./components/Home/TechnologyWeUse";
+import Testimonials from "./components/Home/Testimonials";
+import Workflow from "./components/Home/Workflow";
+import WhyWeAre from "./components/Home/WhyWeAre";
 
 export default function HomePage() {
   return (
@@ -16,14 +16,14 @@ export default function HomePage() {
       <Hero />
       <WhyWeAre />
       <Services />
-      <TechnologyWeUse />
       <Portfolio />
+      <TechnologyWeUse />
       <Workflow />
       <Testimonials />
       <AboutUs />
       <FAQ />
       <Blog />
-      <Contact />
+      <ContactUs />
     </main>
   );
 }

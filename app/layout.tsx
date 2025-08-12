@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-gradient-to-b from-[#050d1a] to-[#0a1629] text-white">
         <Header />
-        {children}
+        <div className="mt-10">{children}</div>
         <Footer />
       </body>
     </html>
