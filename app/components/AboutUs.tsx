@@ -4,30 +4,34 @@ import { motion } from "framer-motion";
 const AboutUs = () => {
   return (
     <section className="py-10 px-6 md:px-16">
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
+      <motion.h2
+        initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="max-w-5xl mx-auto text-center"
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-4xl font-extrabold mb-4 text-center"
       >
-        <h2 className="text-4xl font-bold mb-6 border-b-4 border-blue-500 inline-block pb-1">
-          About MNA Web Programming
-        </h2>
-        <p className="text-lg leading-relaxed mt-4">
-          <span className="font-semibold text-blue-400">
-            MNA Web Programming
-          </span>{" "}
-          is a cutting-edge IT agency committed to transforming your digital
-          ideas into reality. We specialize in delivering modern, responsive,
-          and performance-driven solutions for businesses of all sizes.
-        </p>
-      </motion.div>
+        About <span className="text-cyan-400">MNA Web Programming</span>
+      </motion.h2>
+
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        viewport={{ once: true }}
+        className="text-gray-300 max-w-2xl mx-auto mb-6 text-center"
+      >
+        <span className="font-semibold text-blue-400">MNA Web Programming</span>{" "}
+        is a cutting-edge IT agency committed to transforming your digital ideas
+        into reality. We specialize in delivering modern, responsive, and
+        performance-driven solutions for businesses of all sizes.
+      </motion.p>
 
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.8 }}
-        className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-16 max-w-6xl mx-auto"
+        className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-6 max-w-6xl mx-auto"
       >
         {/* Who We Are */}
         <div className="bg-gray-800 rounded-xl shadow-lg p-6 hover:shadow-blue-500/30 hover:scale-[1.02] transition duration-300">
