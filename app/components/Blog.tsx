@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const posts = [
   {
@@ -57,10 +58,27 @@ const Blog = () => {
   return (
     <section className="py-10 px-6" id="blog">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-14 text-white tracking-tight">
-          📚 Our Latest Blog Posts
-        </h2>
+        <motion.h2
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-4xl font-extrabold mb-4 text-center"
+        >
+          Our Latest <span className="text-cyan-400">Blog Posts</span>
+        </motion.h2>
 
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="text-gray-300 max-w-2xl mx-auto mb-6 text-center"
+        >
+          Stay updated with the latest trends in web development, design, and
+          technology. Our blog features insights, tutorials, and tips to help
+          you succeed in the digital landscape.
+        </motion.p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {posts.map((post, i) => (
             <div
