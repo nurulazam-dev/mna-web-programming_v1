@@ -68,9 +68,25 @@ const Testimonials = () => {
   return (
     <section className="py-10 px-6" id="testimonials">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold mb-10 text-center text-gray-800">
-          What Our Clients Say
-        </h2>
+        <motion.h2
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-4xl font-extrabold mb-4 text-center"
+        >
+          What Our <span className="text-cyan-400">Clients Say</span>
+        </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="text-gray-300 max-w-2xl mx-auto mb-6 text-center"
+        >
+          Our clients love working with us! Here’s what they have to say:
+        </motion.p>
         <div className="overflow-hidden relative">
           <motion.div
             className="flex gap-6"
