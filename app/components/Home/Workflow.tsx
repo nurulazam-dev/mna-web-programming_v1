@@ -64,10 +64,26 @@ const workflowSteps = [
 const Workflow = () => {
   return (
     <section className="py-10 px-6">
-      <h2 className="text-4xl font-bold text-center mb-12">
+      <motion.h2
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-4xl font-extrabold mb-4 text-center"
+      >
         Process <span className="text-cyan-400">We Follow</span>
-      </h2>
+      </motion.h2>
 
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        viewport={{ once: true }}
+        className="text-gray-300 max-w-2xl mx-auto mb-6 text-center"
+      >
+        We follow a structured process to ensure the successful delivery of our
+        projects. Here’s a brief overview of the steps we take:
+      </motion.p>
       <div className="relative max-w-5xl mx-auto">
         {/* Vertical line */}
         <div className="absolute left-1/2 top-0 h-full w-1 bg-gradient-to-b from-cyan-400 to-blue-500 transform -translate-x-1/2"></div>
