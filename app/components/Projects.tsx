@@ -58,7 +58,7 @@ const Projects = () => {
                 setActiveCategory(cat);
                 setVisibleCount(6);
               }}
-              className={`relative px-5 py-2 rounded-full text-sm font-medium transition ${
+              className={`relative px-5 py-2 rounded-md text-sm font-medium transition ${
                 activeCategory === cat
                   ? "bg-gradient-to-r from-blue-500 to-cyan-400 text-white shadow-lg"
                   : "bg-white/80 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-700"
@@ -77,10 +77,7 @@ const Projects = () => {
         </div>
 
         {/* Project Grid */}
-        <motion.div
-          layout
-          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10"
-        >
+        <motion.div layout className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <AnimatePresence>
             {visibleProjects?.map((project, i) => (
               <motion.div
@@ -90,7 +87,7 @@ const Projects = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -40 }}
                 transition={{ duration: 0.5, delay: i * 0.05 }}
-                className="group relative bg-white/80 dark:bg-gray-900/60 backdrop-blur-lg rounded-2xl shadow-lg hover:shadow-2xl overflow-hidden flex flex-col border border-gray-200 dark:border-gray-700"
+                className="group relative bg-white/80 dark:bg-gray-900/60 backdrop-blur-lg rounded-md shadow-lg hover:shadow-2xl overflow-hidden flex flex-col border border-gray-200 dark:border-gray-700"
               >
                 {/* Image with Hover Overlay */}
                 <div className="relative overflow-hidden">
@@ -173,10 +170,10 @@ const Projects = () => {
 
         {/* See More Button */}
         {visibleCount < filteredProjects.length && (
-          <div className="mt-14">
+          <div className="mt-10">
             <button
               onClick={handleSeeMore}
-              className="px-8 py-3 bg-gradient-to-r from-blue-500 to-cyan-400 text-white rounded-full shadow-md hover:shadow-lg hover:scale-105 transition font-medium"
+              className="px-8 py-3 bg-gradient-to-r from-blue-700 to-blue-400 text-white rounded-md shadow-md hover:shadow-lg hover:scale-105 transition font-medium"
             >
               See More
             </button>

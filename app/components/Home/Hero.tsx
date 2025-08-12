@@ -5,6 +5,7 @@ import Image from "next/image";
 import { FaCheckCircle, FaPlay } from "react-icons/fa";
 // import heroImage from "../../public/images/logo/MNA-WEB-PROGRAMMING.png";
 import brandLogo from "../../../public/images/logo/MNA-Web-Programming-logo.png";
+import TypewriterView from "../Shared/TypewriterView";
 import ParticleTextView from "../Shared/ParticleTextView";
 
 const Hero = () => {
@@ -113,6 +114,7 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           // className="flex justify-center relative"
         >
+          <TypewriterView />
           <div className="mb-2 flex justify-center">
             <Image
               src={brandLogo}

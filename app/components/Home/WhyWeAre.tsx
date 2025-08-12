@@ -67,9 +67,9 @@ const WhyWeAre = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: i * 0.2 }}
               viewport={{ once: true }}
-              className="bg-slate-800 p-6 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition transform border border-slate-700"
+              className="bg-slate-800 py-6 px-3 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition transform border border-slate-700"
             >
-              <div className="flex justify-center mb-4">{feature.icon}</div>
+              <div className="flex justify-center mb-2">{feature.icon}</div>
               <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
               <p className="text-gray-400 text-sm">{feature.description}</p>
             </motion.div>

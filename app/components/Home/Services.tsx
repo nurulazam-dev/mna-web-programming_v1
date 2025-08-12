@@ -1,14 +1,33 @@
 "use client";
 
-import { FaLaptopCode, FaMobileAlt, FaPaintBrush } from "react-icons/fa";
+import {
+  FaChalkboardTeacher,
+  FaLaptopCode,
+  FaMobileAlt,
+  FaPaintBrush,
+} from "react-icons/fa";
 import { motion } from "framer-motion";
+import { BiSupport } from "react-icons/bi";
+import { LiaLaptopCodeSolid } from "react-icons/lia";
 
 const services = [
+  {
+    title: "Web Design",
+    icon: <LiaLaptopCodeSolid className="text-white text-3xl" />,
+    desc: "Responsive and modern web designs tailored to your brand's identity.",
+    gradient: "from-violet-700 to-blue-800",
+  },
   {
     title: "Web Development",
     icon: <FaLaptopCode className="text-white text-3xl" />,
     desc: "Modern, fast, and scalable websites built using React & Next.js.",
     gradient: "from-blue-500 to-cyan-400",
+  },
+  {
+    title: "Web Development Training",
+    icon: <FaChalkboardTeacher className="text-white text-3xl" />,
+    desc: "Learn online modern web development from scratch with hands-on projects.",
+    gradient: "from-indigo-700 to-violet-600",
   },
   {
     title: "App Development",
@@ -21,6 +40,12 @@ const services = [
     icon: <FaPaintBrush className="text-white text-3xl" />,
     desc: "Clean, user-friendly, and responsive design using Figma and Tailwind CSS.",
     gradient: "from-orange-400 to-yellow-400",
+  },
+  {
+    title: "Maintenance & Support",
+    icon: <BiSupport className="text-white text-3xl" />,
+    desc: "24/7 technical support and maintenance for your websites and apps.",
+    gradient: "from-gray-500 to-slate-400",
   },
 ];
 
@@ -36,7 +61,7 @@ const Services = () => {
           needs.
         </p>
 
-        <div className="grid md:grid-cols-3 gap-10 mt-6">
+        <div className="grid md:grid-cols-3 gap-6 mt-6">
           {services.map((service, i) => (
             <motion.div
               key={i}
@@ -44,17 +69,17 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: i * 0.2 }}
               viewport={{ once: true }}
-              className="relative group bg-[#101930] rounded-2xl p-8 border border-transparent hover:border-cyan-400 shadow-lg hover:shadow-cyan-500/30 transition-all duration-300"
+              className="relative group bg-[#101930] rounded-md py-8 px-4 border border-transparent hover:border-cyan-400 shadow-lg hover:shadow-cyan-500/30 transition-all duration-300"
             >
               {/* Icon Circle */}
               <div
-                className={`w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-gradient-to-r ${service.gradient} shadow-lg mb-6 group-hover:scale-110 transition duration-300`}
+                className={`w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-gradient-to-r ${service.gradient} shadow-lg mb-3 group-hover:scale-110 transition duration-300`}
               >
                 {service.icon}
               </div>
 
               {/* Title */}
-              <h3 className="text-2xl font-semibold mb-3 group-hover:text-cyan-400 transition">
+              <h3 className="text-2xl font-semibold mb-2 group-hover:text-cyan-400 transition">
                 {service.title}
               </h3>
 
