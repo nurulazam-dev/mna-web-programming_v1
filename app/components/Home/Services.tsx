@@ -53,14 +53,28 @@ const Services = () => {
   return (
     <section id="services" className="py-10 px-6">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-4">
-          Our <span className="text-cyan-400">Services</span>
-        </h2>
-        <p className="text-gray-400 max-w-2xl mx-auto">
-          We provide innovative digital solutions tailored to your business
-          needs.
-        </p>
+        <div>
+          <motion.h2
+            initial={{ opacity: 0, y: -30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-4xl font-extrabold mb-4"
+          >
+            Our <span className="text-cyan-400">Services</span>
+          </motion.h2>
 
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="text-gray-300 max-w-2xl mx-auto mb-6"
+          >
+            We provide innovative digital solutions tailored to your business
+            needs.
+          </motion.p>
+        </div>
         <div className="grid md:grid-cols-3 gap-6 mt-6">
           {services.map((service, i) => (
             <motion.div
