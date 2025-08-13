@@ -44,7 +44,8 @@ const WhyWeAre = () => {
           viewport={{ once: true }}
           className="text-4xl font-extrabold mb-4"
         >
-          Why We Are Different
+          {" "}
+          Why We Are <span className="text-cyan-400">Different</span>
         </motion.h2>
 
         <motion.p
