@@ -35,7 +35,8 @@ const Projects = () => {
           viewport={{ once: true }}
           className="text-4xl font-extrabold mb-4"
         >
-          Explore Our Works
+          {" "}
+          Explore <span className="text-cyan-400">Our Works</span>
         </motion.h2>
 
         <motion.p
