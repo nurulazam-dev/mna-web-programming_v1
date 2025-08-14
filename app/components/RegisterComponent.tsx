@@ -87,7 +87,7 @@ const RegisterComponent: React.FC = () => {
   return (
     <div className="min-h-screen">
       <div className="w-full flex items-center justify-center p-8">
-        <div className="w-full max-w-md">
+        <div className="w-full max-w-md bg-gray-50 dark:bg-gray-900">
           {/* Card Container */}
           <div className="signin-card border border-gray-200 rounded-lg shadow-sm p-6">
             {/* Header */}

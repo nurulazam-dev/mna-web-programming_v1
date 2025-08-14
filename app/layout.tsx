@@ -1,20 +1,12 @@
 import type { Metadata } from "next";
-
 import "./globals.css";
-import Footer from "./components/Shared/Footer";
-import Header from "./components/Shared/Header";
+import LayoutWrapper from "./components/Shared/LayoutWrapper";
 
 export const metadata: Metadata = {
   title: "MNA Web Programming",
   description:
     "A comprehensive platform for web programming courses and resources.",
 };
-
-const location = useLocation();
-
-const hideFooter = ["/login", "/register"].some((path) =>
-  location.pathname.startsWith(path)
-);
 
 export default function RootLayout({
   children,
@@ -24,9 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-gradient-to-b from-[#050d1a] to-[#0a1629] text-white">
-        <Header />
-        <div className="mt-10">{children}</div>
-        {!hideFooter && <Footer />}
+        <LayoutWrapper>{children}</LayoutWrapper>
       </body>
     </html>
   );

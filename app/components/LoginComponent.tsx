@@ -68,7 +68,7 @@ const LoginComponent: React.FC = () => {
   return (
     <div className="min-h-screen">
       <div className="w-full flex items-center justify-center p-8">
-        <div className="w-full max-w-md space-y-5 border p-6 rounded-lg shadow-lg">
+        <div className="w-full max-w-md space-y-5 border p-6 rounded-lg shadow-lg bg-gray-50 dark:bg-gray-900">
           {/* Header */}
           <div className="text-center">
             <h1 className="text-3xl font-semibold tracking-tight text-zinc-900 dark:text-white">
