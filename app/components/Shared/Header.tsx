@@ -6,16 +6,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import brandLogo from "../../../public/images/logo/MNA-WEB-PROGRAMMING.png";
+import StylistCustomButton from "./StylistCustomButton";
 
-const navLinks = [
-  "Home",
-  "Projects",
-  "Courses",
-  "About Us",
-  "Contact Us",
-  "Register",
-  "Login",
-];
+const navLinks = ["Home", "Projects", "Courses", "About Us", "Contact Us"];
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,8 +44,8 @@ const Header = () => {
             <Image
               src={brandLogo}
               alt="MNA Web Programming Logo"
-              width={scrolled ? 110 : 140}
-              height={scrolled ? 110 : 140}
+              width={scrolled ? 130 : 140}
+              height={scrolled ? 130 : 140}
               priority
               className="transition-all duration-300"
             />
@@ -60,11 +53,10 @@ const Header = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-10">
+        <nav className="hidden md:flex space-x-10 md:items-center">
           {navLinks.map((link, idx) => (
             <motion.a
               key={idx}
-              // href={`#${link.toLowerCase()}`}
               href={`/${link.replace(/[^a-zA-Z0-9]+/g, "-").toLowerCase()}`}
               className="relative text-gray-800 dark:text-gray-200 font-medium group"
             >
@@ -72,6 +64,7 @@ const Header = () => {
               <span className="absolute left-0 bottom-[-4px] w-0 h-[2px] bg-gradient-to-r from-blue-500 to-purple-500 transition-all group-hover:w-full"></span>
             </motion.a>
           ))}
+          <StylistCustomButton customLink="/login" buttonText="Login" />
         </nav>
 
         {/* Mobile Menu Button */}
@@ -126,6 +119,7 @@ const Header = () => {
                     {link}
                   </motion.a>
                 ))}
+                <StylistCustomButton customLink="/login" buttonText="Login" />
               </div>
             </motion.div>
           </>

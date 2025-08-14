@@ -2,29 +2,13 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { FaCheckCircle, FaPlay } from "react-icons/fa";
-// import heroImage from "../../public/images/logo/MNA-WEB-PROGRAMMING.png";
+import { FaCheckCircle } from "react-icons/fa";
 import brandLogo from "../../../public/images/logo/MNA-Web-Programming-logo.png";
 import TypewriterView from "../Shared/TypewriterView";
 import ParticleTextView from "../Shared/ParticleTextView";
+import StylistCustomButton from "../Shared/StylistCustomButton";
 
 const Hero = () => {
-  const customCss = `
-   
-    @property --angle {
-      syntax: '<angle>';
-      initial-value: 0deg;
-      inherits: false;
-    }
-
-   
-    @keyframes shimmer-spin {
-      to {
-        --angle: 360deg;
-      }
-    }
-  `;
-
   return (
     <section
       id="home"
@@ -81,29 +65,15 @@ const Hero = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-wrap gap-4 pt-4">
-            <div className="flex items-center justify-center font-sans">
-              <style>{customCss}</style>
-              <button className="relative inline-flex items-center justify-center p-[1.5px] bg-sky-600 dark:bg-black rounded-lg overflow-hidden group">
-                <div
-                  className="absolute inset-0"
-                  style={{
-                    background:
-                      "conic-gradient(from var(--angle), transparent 25%, #06b6d4, transparent 50%)",
-                    animation: "shimmer-spin 2.5s linear infinite",
-                  }}
-                />
-                <span className="relative z-10 inline-flex items-center justify-center w-full h-full px-8 py-3 bg-slate-900 hover:to-blue-700 text-white  rounded-lg transition-colors duration-300">
-                  Get Free Consultation
-                </span>
-              </button>
-            </div>
-            <a
-              href="#portfolio"
-              className="flex items-center gap-2 border border-sky-500 text-sky-600 hover:bg-sky-50 px-6 py-3 rounded-lg font-medium transition"
-            >
-              <FaPlay /> Watch Intro
-            </a>
+          <div className="flex flex-wrap gap-4 pt-2">
+            <StylistCustomButton
+              customLink="/contact-us"
+              buttonText="Get Free Consultation"
+            />
+            <StylistCustomButton
+              customLink="/courses"
+              buttonText="Explore Courses"
+            />
           </div>
         </motion.div>
 
