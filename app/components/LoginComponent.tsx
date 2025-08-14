@@ -1,39 +1,7 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
-
-/* const ShieldIcon: React.FC = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="28"
-    height="28"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-  </svg>
-); */
-
-const AtSignIcon: React.FC = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="20"
-    height="20"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <circle cx="12" cy="12" r="4"></circle>
-    <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path>
-  </svg>
-);
+import { MdMailOutline } from "react-icons/md";
 
 const LockIcon: React.FC = () => (
   <svg
@@ -98,44 +66,17 @@ const LoginComponent: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex">
-      {/* Left side - Image/Branding */}
-      {/* <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative z-10 flex flex-col justify-center items-center text-white p-12">
-          <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-8">
-            <ShieldIcon />
-          </div>
-          <h1 className="text-4xl font-bold mb-4 text-center">Secure Access</h1>
-          <p className="text-xl text-center text-white/90 max-w-md">
-            Your trusted platform for secure authentication and seamless user
-            experience.
-          </p>
-          <div className="mt-12 grid grid-cols-3 gap-4 opacity-60">
-            {[...Array(9)].map((_, i) => (
-              <div key={i} className="w-2 h-2 bg-white/40 rounded-full"></div>
-            ))}
-          </div>
-        </div>
-      </div> */}
-
-      {/* Right side - Login Form */}
-      {/* <div className="w-full lg:w-1/2 flex items-center justify-center p-8"> */}
+    <div className="min-h-screen">
       <div className="w-full flex items-center justify-center p-8">
         <div className="w-full max-w-md space-y-5 border p-6 rounded-lg shadow-lg">
           {/* Header */}
           <div className="text-center">
-            {/*  <div className="w-12 h-12 bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-500 dark:to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-2">
-              <ShieldIcon />
-            </div> */}
-            <div>
-              <h1 className="text-3xl font-semibold tracking-tight text-zinc-900 dark:text-white">
-                Welcome back
-              </h1>
-              <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-1">
-                Enter your credentials to sign in
-              </p>
-            </div>
+            <h1 className="text-3xl font-semibold tracking-tight text-zinc-900 dark:text-white">
+              Welcome back
+            </h1>
+            <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-1">
+              Enter your credentials to sign in
+            </p>
           </div>
 
           {/* Form */}
@@ -146,11 +87,11 @@ const LoginComponent: React.FC = () => {
                 htmlFor="email"
                 className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
               >
-                Email address
+                Email
               </label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400 dark:text-gray-500">
-                  <AtSignIcon />
+                  <MdMailOutline className="w-5 h-5" />
                 </div>
                 <input
                   id="email"
