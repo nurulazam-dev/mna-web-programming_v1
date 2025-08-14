@@ -1,55 +1,54 @@
 "use client";
 
+import { coursesData } from "@/public/data/coursesDataBank";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { FaClock, FaDollarSign, FaBook } from "react-icons/fa";
-
-type Instructor = {
-  image: string;
-  name: string;
-  title: string;
-  bio: string;
+import { notFound } from "next/navigation";
+import { FaClock, FaDollarSign, FaBook, FaArrowLeft } from "react-icons/fa";
+type Props = {
+  params: {
+    id: string;
+  };
 };
 
-type Course = {
-  imageLink: string;
-  title: string;
-  desc: string;
-  curriculum?: string[];
-  instructor: Instructor;
-  duration: string;
-  price: string;
-  id: string;
-};
+export default function CourseDetails({ params }: Props) {
+  const { id } = params;
 
-interface CourseDetailsProps {
-  course: Course;
-}
+  const course = coursesData?.find((course) => course?.id === id);
 
-export default function CourseDetails({ course }: CourseDetailsProps) {
+  if (!course) {
+    notFound();
+  }
+
   return (
-    <section className="bg-gray-50 dark:bg-gray-900 min-h-screen pb-16">
+    <section className="min-h-screen py-10">
+      <div className="my-4">
+        <Link
+          href={`/courses`}
+          className="inline-flex items-center gap-2 text-blue-600 border border-blue-600 hover:bg-blue-600 hover:text-white px-4 py-1 rounded-full transition-all shadow-sm"
+        >
+          <FaArrowLeft /> Back to Courses
+        </Link>
+      </div>
       {/* Hero Section */}
-      <div className="relative w-full h-[300px] md:h-[400px]">
+      <div className="rounded-xl overflow-hidden shadow-lg group">
         <Image
           src={course?.imageLink}
           alt={course?.title}
-          fill
-          className="object-cover"
+          className="w-full h-[420px] object-cover transform group-hover:scale-105 transition duration-700"
+          width={1200}
+          height={500}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-black/30 flex items-end p-8">
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-3xl md:text-5xl font-bold text-white"
-          >
-            {course?.title}
-          </motion.h1>
-        </div>
       </div>
-
+      <motion.h1
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="text-3xl md:text-5xl font-bold text-white px-4"
+      >
+        {course?.title}
+      </motion.h1>
       <div className="max-w-7xl mx-auto px-6 mt-10 grid grid-cols-1 lg:grid-cols-3 gap-10">
         {/* Left: Main Content */}
         <motion.div
