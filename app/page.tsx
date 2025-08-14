@@ -9,7 +9,7 @@ import TechnologyWeUse from "./components/Home/TechnologyWeUse";
 import Testimonials from "./components/Home/Testimonials";
 import Workflow from "./components/Home/Workflow";
 import WhyWeAre from "./components/Home/WhyWeAre";
-import OnlineCourses from "./components/OnlineCourses";
+import OurCourses from "./components/OurCourses";
 
 export default function HomePage() {
   return (
@@ -22,7 +22,7 @@ export default function HomePage() {
       <Workflow />
       <Testimonials />
       <AboutUs />
-      <OnlineCourses />
+      <OurCourses />
       <FAQ />
       <Blog />
       <ContactUs />

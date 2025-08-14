@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-const OnlineCourses = () => {
+const OurCourses = () => {
   return (
     <section className="py-10 px-6">
       <div className="max-w-7xl mx-auto text-center">
@@ -17,7 +17,7 @@ const OnlineCourses = () => {
             viewport={{ once: true }}
             className="text-4xl font-extrabold mb-4"
           >
-            Our Online <span className="text-cyan-400">Courses</span>
+            Our <span className="text-cyan-400">Courses</span>
           </motion.h2>
 
           <motion.p
@@ -54,10 +54,10 @@ const OnlineCourses = () => {
               </div>
               <div className="flex justify-between px-4 text-gray-300 text-sm my-2">
                 <span className="border rounded-full px-2 py-1">
-                  ⏳ {course.duration}
+                  ⏳ {course?.duration}
                 </span>
                 <span className="border rounded-full px-2 py-1">
-                  💲 {course.price}
+                  💲 {course?.price}
                 </span>
               </div>
               {/* Card Content */}
@@ -82,7 +82,7 @@ const OnlineCourses = () => {
                 <Link href={`/courses/${course?.id}`}>
                   <motion.button
                     whileHover={{ scale: 1.05 }}
-                    className="px-4 py-2 rounded-lg font-medium bg-white text-black hover:bg-gray-200 transition"
+                    className="px-4 py-2 rounded-lg font-medium bg-white text-black hover:bg-gray-200 transition cursor-pointer"
                   >
                     View Details
                   </motion.button>
@@ -96,4 +96,4 @@ const OnlineCourses = () => {
   );
 };
 
-export default OnlineCourses;
+export default OurCourses;

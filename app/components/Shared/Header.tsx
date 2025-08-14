@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import brandLogo from "../../../public/images/logo/MNA-WEB-PROGRAMMING.png";
 
-const navLinks = ["Home", "Projects", "About Us", "Contact Us"];
+const navLinks = ["Home", "Projects", "Courses", "About Us", "Contact Us"];
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
