@@ -5,6 +5,8 @@ import { motion, PanInfo } from "framer-motion";
 import Image from "next/image";
 import { testimonialsData } from "@/public/data/testimonialsDataBank";
 import {
+  FaArrowLeft,
+  FaArrowRight,
   FaFacebook,
   FaGithub,
   FaInstagram,
@@ -13,44 +15,6 @@ import {
   FaQuoteRight,
   FaTwitter,
 } from "react-icons/fa";
-
-interface IconProps {
-  className?: string;
-}
-
-const ChevronLeftIcon: React.FC<IconProps> = ({ className }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className={className}
-  >
-    <path d="m15 18-6-6 6-6" />
-  </svg>
-);
-
-const ChevronRightIcon: React.FC<IconProps> = ({ className }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className={className}
-  >
-    <path d="m9 18 6-6-6-6" />
-  </svg>
-);
 
 interface CardData {
   id: number;
@@ -140,13 +104,13 @@ const Testimonials = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-gray-300 max-w-2xl mx-auto mb-1 text-center"
+            className="text-gray-300 max-w-2xl mx-auto mb-3 text-center px-6"
           >
             Our clients love working with us! Here’s what they have to say:
           </motion.p>
         </div>
         <div className="relative flex w-full flex-col">
-          <div className="relative w-full h-[280px] md:h-[400px] flex items-center justify-center overflow-hidden">
+          <div className="relative w-full h-[350px] md:h-[400px] flex items-center justify-center overflow-hidden">
             <motion.div
               className="w-full h-full flex items-center justify-center"
               drag="x"
@@ -174,7 +138,7 @@ const Testimonials = () => {
               onClick={() => changeSlide(activeIndex - 1)}
               className="p-2 rounded-full bg-gray-100 dark:bg-white/5 hover:bg-gray-200 dark:hover:bg-white/10 border border-gray-300 dark:border-white/10 text-gray-700 dark:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-pink-500"
             >
-              <ChevronLeftIcon className="w-6 h-6" />
+              <FaArrowLeft className="w-6 h-6" />
             </button>
 
             <div className="flex items-center justify-center gap-3">
@@ -196,7 +160,7 @@ const Testimonials = () => {
               onClick={() => changeSlide(activeIndex + 1)}
               className="p-2 rounded-full bg-gray-100 dark:bg-white/5 hover:bg-gray-200 dark:hover:bg-white/10 border border-gray-300 dark:border-white/10 text-gray-700 dark:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-pink-500"
             >
-              <ChevronRightIcon className="w-6 h-6" />
+              <FaArrowRight className="w-6 h-6" />
             </button>
           </div>
         </div>
@@ -238,16 +202,16 @@ const Card: React.FC<CardProps> = ({
   };
   return (
     <motion.div
-      className="absolute w-1/2 md:w-1/3 h-[95%]"
+      className="absolute w-4/6 md:w-1/3 h-[100%] md:h-[95%]"
       style={{
         transformStyle: "preserve-3d",
       }}
       animate={animate}
       initial={false}
     >
-      <div className="relative w-full h-full shadow-2xl overflow-hidden flex items-center justify-center">
-        <div className="relative w-[410px] min-h-[370px] bg-[#1e1e1e] text-white rounded-xl px-4 py-6 shadow-lg border-l-[3px] border-red-500 flex-shrink-0">
-          <div className="pl-5">
+      <div className="relative w-full h-full shadow-2xl overflow-hidden flex items-center justify-center ">
+        <div className="relative md:w-[410px] w-[270px] min-h-[300px] md:min-h-[370px] bg-[#1e1e1e] text-white rounded-xl px-4 py-6 shadow-lg border-l-[3px] border-red-500 flex-shrink-0">
+          <div className="md:pl-5 pl-2">
             <Image
               src={card.image}
               alt={card.name}
@@ -269,7 +233,7 @@ const Card: React.FC<CardProps> = ({
               <FaGithub className="h-5 w-5 text-white" />
             </div>
           </div>
-          <div className="border-b border-gray-300 my-4"></div>
+          <div className="border-b border-gray-300 my-4 "></div>
           {/* Feedback */}
           <p className="text-gray-400 text-md text-justify flex leading-6">
             <FaQuoteLeft className="opacity-70 text-[12px]" />
@@ -278,7 +242,7 @@ const Card: React.FC<CardProps> = ({
 
           {/* Quote Icon */}
           <div className="absolute top-4 right-5">
-            <FaQuoteRight className="opacity-10 text-9xl" />
+            <FaQuoteRight className="opacity-10 md:text-9xl text-7xl" />
           </div>
         </div>
       </div>
