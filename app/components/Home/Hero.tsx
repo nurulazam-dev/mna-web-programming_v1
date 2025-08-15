@@ -82,7 +82,7 @@ const Hero = () => {
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="order-1 md:order-2 md:mt-1 mt-7"
+          className="order-1 md:order-2 md:mt-0 mt-7"
           // className="flex justify-center relative"
         >
           <TypewriterView />
