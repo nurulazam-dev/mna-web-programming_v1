@@ -34,13 +34,13 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="space-y-6"
         >
-          <h1 className="text-4xl md:text-5xl font-extrabold text-slate-100 leading-tight">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-slate-100 leading-tight md:mt-1 mt-8 md:text-left text-center">
             Empowering Your{" "}
             <span className="bg-gradient-to-r from-sky-500 to-blue-600 bg-clip-text text-transparent">
               Digital Journey
             </span>
           </h1>
-          <p className="text-slate-200 text-lg max-w-xl">
+          <p className="text-slate-200 text-lg max-w-xl md:text-left text-justify">
             We specialize in modern <strong>Web Design</strong>, robust{" "}
             <strong>Web Development</strong>, powerful{" "}
             <strong>App Development</strong>, and online education through our
@@ -48,7 +48,7 @@ const Hero = () => {
           </p>
 
           {/* Features */}
-          <div className="grid grid-cols-2 gap-4 text-slate-200">
+          <div className="grid md:grid-cols-2 grid-cols-1 gap-4 text-slate-200">
             {[
               "Full-Stack Development",
               "Scalable Solutions",
@@ -56,10 +56,10 @@ const Hero = () => {
               "Mobile App Solutions",
               "Responsive Development",
               "Learn Web Development",
-            ].map((item, idx) => (
+            ]?.map((item, idx) => (
               <div key={idx} className="flex items-center gap-2">
                 <FaCheckCircle className="text-sky-500" />
-                <span className="text-sm font-medium">{item}</span>
+                <span className="md:text-sm text-md font-medium">{item}</span>
               </div>
             ))}
           </div>

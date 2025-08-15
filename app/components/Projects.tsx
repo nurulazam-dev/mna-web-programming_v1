@@ -25,7 +25,7 @@ const Projects = () => {
   const handleSeeMore = () => setVisibleCount((prev) => prev + 3);
 
   return (
-    <section id="projects" className="py-10 px-6">
+    <section id="projects" className="py-10">
       <div className="max-w-7xl mx-auto text-center">
         {/* Heading */}
         <motion.h2
@@ -44,14 +44,14 @@ const Projects = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="text-gray-300 max-w-2xl mx-auto mb-6"
+          className="text-gray-300 max-w-2xl mx-auto mb-6 px-6"
         >
           Explore our latest projects — from full-stack apps to sleek front-end
           designs, crafted with precision and passion.
         </motion.p>
 
         {/* Filter Tabs */}
-        <div className="flex justify-center gap-4 flex-wrap mb-6">
+        <div className="flex justify-center md:gap-4 gap-[7px] flex-wrap mb-6">
           {categories?.map((cat) => (
             <button
               key={cat}
@@ -78,7 +78,10 @@ const Projects = () => {
         </div>
 
         {/* Project Grid */}
-        <motion.div layout className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div
+          layout
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6"
+        >
           <AnimatePresence>
             {visibleProjects?.map((project, i) => (
               <motion.div
