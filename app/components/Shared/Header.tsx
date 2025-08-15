@@ -86,7 +86,7 @@ const Header = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 0.4 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black z-40"
+              className="fixed inset-0 z-40"
               onClick={() => setIsOpen(false)}
             ></motion.div>
 
@@ -96,9 +96,9 @@ const Header = () => {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ duration: 0.4, ease: "easeInOut" }}
-              className="fixed top-0 right-0 w-72 h-full bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg shadow-lg md:hidden p-6 z-50 flex flex-col"
+              className="fixed top-0 right-0 w-62 h-screen bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg shadow-lg md:hidden z-50 flex flex-col"
             >
-              <div className="flex justify-end">
+              <div className="flex justify-end pt-4 pr-4">
                 <button
                   className="text-3xl text-gray-800 dark:text-gray-200"
                   onClick={() => setIsOpen(false)}
@@ -106,7 +106,7 @@ const Header = () => {
                   <FiX />
                 </button>
               </div>
-              <div className="mt-10 flex flex-col space-y-6">
+              <div className="mt-4 flex flex-col space-y-5  px-4 py-6">
                 {navLinks.map((link, idx) => (
                   <motion.a
                     key={idx}
