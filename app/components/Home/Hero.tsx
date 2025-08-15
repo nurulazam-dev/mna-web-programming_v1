@@ -32,9 +32,9 @@ const Hero = () => {
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="space-y-6"
+          className="space-y-6 order-2 md:order-1"
         >
-          <h1 className="text-4xl md:text-5xl font-extrabold text-slate-100 leading-tight md:mt-1 mt-8 md:text-left text-center">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-slate-100 leading-tight  md:text-left text-center">
             Empowering Your{" "}
             <span className="bg-gradient-to-r from-sky-500 to-blue-600 bg-clip-text text-transparent">
               Digital Journey
@@ -82,6 +82,7 @@ const Hero = () => {
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
+          className="order-1 md:order-2 md:mt-1 mt-7"
           // className="flex justify-center relative"
         >
           <TypewriterView />
