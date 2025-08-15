@@ -54,10 +54,10 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-10 md:items-center">
-          {navLinks.map((link, idx) => (
+          {navLinks?.map((link, idx) => (
             <motion.a
               key={idx}
-              href={`/${link.replace(/[^a-zA-Z0-9]+/g, "-").toLowerCase()}`}
+              href={`/${link?.replace(/[^a-zA-Z0-9]+/g, "-").toLowerCase()}`}
               className="relative text-gray-800 dark:text-gray-200 font-medium group"
             >
               {link}
@@ -107,10 +107,12 @@ const Header = () => {
                 </button>
               </div>
               <div className="mt-4 flex flex-col space-y-5  px-4 py-6">
-                {navLinks.map((link, idx) => (
+                {navLinks?.map((link, idx) => (
                   <motion.a
                     key={idx}
-                    href={`#${link.toLowerCase()}`}
+                    href={`/${link
+                      ?.replace(/[^a-zA-Z0-9]+/g, "-")
+                      .toLowerCase()}`}
                     className="text-gray-800 dark:text-gray-200 font-medium text-lg"
                     whileHover={{ x: 5, color: "#0077ff" }}
                     transition={{ type: "spring", stiffness: 300 }}
