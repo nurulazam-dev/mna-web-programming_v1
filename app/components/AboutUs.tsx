@@ -1,7 +1,34 @@
 "use client";
+import { journeyData } from "@/public/data/aboutUsDataBank";
 import { motion } from "framer-motion";
 import { FaChalkboardTeacher, FaGlobe, FaUsers } from "react-icons/fa";
 import { LiaLaptopCodeSolid } from "react-icons/lia";
+const CompanyValuesData = [
+  {
+    icon: <LiaLaptopCodeSolid />,
+    title: "Web Solutions",
+    desc: "From websites to full-stack apps",
+    gradient: "from-violet-700 to-blue-800",
+  },
+  {
+    icon: <FaChalkboardTeacher />,
+    title: "Online Courses",
+    desc: "Interactive programming learning",
+    gradient: "from-blue-500 to-cyan-400",
+  },
+  {
+    icon: <FaUsers />,
+    title: "Expert Team",
+    desc: "Skilled professionals & mentors",
+    gradient: "from-indigo-700 to-violet-600",
+  },
+  {
+    icon: <FaGlobe />,
+    title: "Global Reach",
+    desc: "Serving clients & learners worldwide",
+    gradient: "from-orange-400 to-yellow-400",
+  },
+];
 
 const AboutUs = () => {
   return (
@@ -36,47 +63,22 @@ const AboutUs = () => {
         viewport={{ once: true }}
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center px-4"
       >
-        {[
-          {
-            icon: <LiaLaptopCodeSolid />,
-            title: "Web Solutions",
-            desc: "From websites to full-stack apps",
-            gradient: "from-violet-700 to-blue-800",
-          },
-          {
-            icon: <FaChalkboardTeacher />,
-            title: "Online Courses",
-            desc: "Interactive programming learning",
-            gradient: "from-blue-500 to-cyan-400",
-          },
-          {
-            icon: <FaUsers />,
-            title: "Expert Team",
-            desc: "Skilled professionals & mentors",
-            gradient: "from-indigo-700 to-violet-600",
-          },
-          {
-            icon: <FaGlobe />,
-            title: "Global Reach",
-            desc: "Serving clients & learners worldwide",
-            gradient: "from-orange-400 to-yellow-400",
-          },
-        ].map((item, idx) => (
+        {CompanyValuesData?.map((item, idx) => (
           <div
             key={idx}
             className="bg-gray-800 rounded-xl shadow-lg px-2 py-3 hover:shadow-blue-500/30 hover:scale-[1.02] duration-300 hover:shadow-2xl transition"
           >
             <div className="flex justify-center items-center text-white mb-1">
               <div
-                className={`border rounded-full text-7xl p-4 bg-gradient-to-r ${item.gradient}`}
+                className={`border rounded-full text-7xl p-4 bg-gradient-to-r ${item?.gradient}`}
               >
-                {item.icon}
+                {item?.icon}
               </div>
             </div>
             <h3 className="text-xl font-semibold text-blue-400">
-              {item.title}
+              {item?.title}
             </h3>
-            <p className="text-gray-400">{item.desc}</p>
+            <p className="text-gray-400">{item?.desc}</p>
           </div>
         ))}
       </motion.div>
@@ -93,28 +95,7 @@ const AboutUs = () => {
         </motion.h3>
 
         <div className="relative border-l-4 border-blue-500 pl-8 space-y-6">
-          {[
-            {
-              year: "2018",
-              title: "Founded as a Web Development Agency",
-              desc: "Started by passionate developers delivering modern websites & applications.",
-            },
-            {
-              year: "2020",
-              title: "Expanding into Full-Stack Solutions",
-              desc: "Became a trusted partner for startups & businesses with complete digital solutions.",
-            },
-            {
-              year: "2022",
-              title: "Launched Online Learning Platform",
-              desc: "Started offering professional web programming courses with real-world projects.",
-            },
-            {
-              year: "2024",
-              title: "Global Growth",
-              desc: "Now we serve clients worldwide and teach hundreds of learners every month.",
-            },
-          ].map((item, idx) => (
+          {journeyData?.map((item, idx) => (
             <motion.div
               key={idx}
               initial={{ opacity: 0, x: idx % 2 === 0 ? -80 : 80 }}
@@ -124,12 +105,12 @@ const AboutUs = () => {
               className="bg-gray-800 rounded-xl shadow-lg p-6 hover:shadow-blue-500/30 hover:scale-[1.02] transition duration-300 relative"
             >
               <span className="absolute -left-12 top-6 bg-blue-500 text-white font-bold px-3 py-1 rounded-lg">
-                {item.year}
+                {item?.year}
               </span>
               <h4 className="text-xl font-semibold text-white mb-1">
-                {item.title}
+                {item?.title}
               </h4>
-              <p className="text-gray-400">{item.desc}</p>
+              <p className="text-gray-400">{item?.desc}</p>
             </motion.div>
           ))}
         </div>
