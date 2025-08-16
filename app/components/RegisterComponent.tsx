@@ -1,76 +1,13 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
-import { FaUser } from "react-icons/fa";
+import { FaCheckSquare, FaUser } from "react-icons/fa";
 import { MdMailOutline } from "react-icons/md";
-
-const LockIcon: React.FC = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="16"
-    height="16"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-    <circle cx="12" cy="16" r="1"></circle>
-    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-  </svg>
-);
-
-const EyeIcon: React.FC = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="16"
-    height="16"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-    <circle cx="12" cy="12" r="3"></circle>
-  </svg>
-);
-
-const EyeOffIcon: React.FC = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="16"
-    height="16"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
-    <line x1="1" y1="1" x2="23" y2="23"></line>
-  </svg>
-);
-
-const CheckIcon: React.FC = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="12"
-    height="12"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="3"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <polyline points="20,6 9,17 4,12"></polyline>
-  </svg>
-);
+import backgroundBanner from "../../public/images/mna-web-programming-banner.png";
+import { RiLockPasswordLine } from "react-icons/ri";
+import { CgLogIn } from "react-icons/cg";
+import { BsEye } from "react-icons/bs";
+import { IoEyeOffOutline } from "react-icons/io5";
 
 // Main Component
 const RegisterComponent: React.FC = () => {
@@ -85,7 +22,16 @@ const RegisterComponent: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen w-full flex items-center justify-center p-6">
+    <div
+      className="min-h-screen w-full flex items-center justify-center p-6"
+      style={{
+        backgroundImage: `url(${backgroundBanner.src})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
+      }}
+    >
       <div className="w-full max-w-md bg-gray-50 dark:bg-gray-900">
         {/* Card Container */}
         <div className="signin-card border border-gray-200 rounded-lg shadow-sm p-6">
@@ -99,6 +45,9 @@ const RegisterComponent: React.FC = () => {
             </p>
           </div>
 
+          {/* =======================
+                  Form
+        ======================== */}
           <form className="space-y-4">
             {/* name Input */}
             <div>
@@ -118,7 +67,7 @@ const RegisterComponent: React.FC = () => {
                   value={fullName}
                   onChange={(e) => setFullName(e.target.value)}
                   placeholder="Enter your full name"
-                  className="block w-full pl-10 pr-3 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-black text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 focus:border-transparent transition-all duration-200"
+                  className="block w-full pl-10 pr-3 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-black text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 focus:border-transparent transition-all duration-200"
                 />
               </div>
             </div>
@@ -140,8 +89,8 @@ const RegisterComponent: React.FC = () => {
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="you@example.com"
-                  className="block w-full pl-10 pr-3 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-black text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 focus:border-transparent transition-all duration-200"
+                  placeholder="Your email address"
+                  className="block w-full pl-10 pr-3 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-black text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 focus:border-transparent transition-all duration-200"
                 />
               </div>
             </div>
@@ -156,21 +105,25 @@ const RegisterComponent: React.FC = () => {
               </label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400 dark:text-gray-500">
-                  <LockIcon />
+                  <RiLockPasswordLine className="w-5 h-5" />
                 </div>
                 <input
                   type={showPassword ? "text" : "password"}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Enter your password"
-                  className="block w-full pl-10 pr-12 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-black text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 focus:border-transparent transition-all duration-200"
+                  className="block w-full pl-10 pr-12 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-black text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 focus:border-transparent transition-all duration-200"
                 />
                 <button
                   type="button"
                   onClick={togglePasswordVisibility}
                   className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
                 >
-                  {showPassword ? <EyeOffIcon /> : <EyeIcon />}
+                  {showPassword ? (
+                    <IoEyeOffOutline className="w-5 h-5" />
+                  ) : (
+                    <BsEye className="w-5 h-5" />
+                  )}
                 </button>
               </div>
             </div>
@@ -192,11 +145,11 @@ const RegisterComponent: React.FC = () => {
                   <div
                     className={`w-4 h-4 border border-gray-300 dark:border-gray-600 rounded flex items-center justify-center transition-all duration-200 ${
                       isChecked
-                        ? "bg-gray-900 dark:bg-gray-100 border-gray-900 dark:border-gray-100"
+                        ? "bg-gray-900 dark:bg-indigo-600 border-gray-900 dark:border-gray-100"
                         : "bg-white dark:bg-black hover:border-gray-400 dark:hover:border-gray-500"
                     }`}
                   >
-                    {isChecked && <CheckIcon />}
+                    {isChecked && <FaCheckSquare />}
                   </div>
                 </label>
               </div>
@@ -224,10 +177,10 @@ const RegisterComponent: React.FC = () => {
             {/* Submit Button */}
             <button
               type="submit"
-              className="signin-button w-full bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-500 dark:to-purple-500 text-white font-semibold text-xl py-3 px-4 rounded-lg hover:from-indigo-700 hover:to-purple-700 dark:hover:from-indigo-600 dark:hover:to-purple-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 transform transition-all duration-200 hover:scale-[1.01] shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+              className="signin-button w-full bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-500 dark:to-purple-500 text-white font-semibold text-xl py-3 px-4 rounded-lg hover:from-indigo-700 hover:to-purple-700 dark:hover:from-indigo-600 dark:hover:to-purple-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 transform transition-all duration-200 hover:scale-[1.01] shadow-lg disabled:opacity-50 disabled:cursor-not-allowed flex justify-center items-center"
               disabled={!isChecked}
             >
-              Create account
+              Register <CgLogIn className="w-6 h-6 ml-1 mt-1" />
             </button>
           </form>
 
