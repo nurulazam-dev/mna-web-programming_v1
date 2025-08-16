@@ -35,7 +35,7 @@ const RegisterComponent: React.FC = () => {
       <div className="w-full max-w-md bg-gray-50 dark:bg-gray-900">
         {/* Card Container */}
         <div className="signin-card border border-gray-200 rounded-lg shadow-sm p-6">
-          {/* Header */}
+          {/* =====Header ===== */}
           <div className="text-center mb-6">
             <h1 className="text-3xl font-semibold tracking-tight text-zinc-900 dark:text-white">
               Create account
@@ -49,7 +49,7 @@ const RegisterComponent: React.FC = () => {
                   Form
         ======================== */}
           <form className="space-y-4">
-            {/* name Input */}
+            {/* ============Name Input=========== */}
             <div>
               <label
                 htmlFor="name"
@@ -72,7 +72,7 @@ const RegisterComponent: React.FC = () => {
               </div>
             </div>
 
-            {/* Email Input */}
+            {/* ==========Email Input=========== */}
             <div>
               <label
                 htmlFor="email"
@@ -95,7 +95,7 @@ const RegisterComponent: React.FC = () => {
               </div>
             </div>
 
-            {/* Password Input */}
+            {/* ============Password Input============ */}
             <div className="space-y-2">
               <label
                 htmlFor="password"
@@ -128,7 +128,7 @@ const RegisterComponent: React.FC = () => {
               </div>
             </div>
 
-            {/* Terms Checkbox */}
+            {/* ============Terms Checkbox=============== */}
             <div className="flex items-start space-x-2">
               <div className="relative flex items-center">
                 <input
@@ -174,7 +174,7 @@ const RegisterComponent: React.FC = () => {
               </label>
             </div>
 
-            {/* Submit Button */}
+            {/* ===============Submit Button================ */}
             <button
               type="submit"
               className="signin-button w-full bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-500 dark:to-purple-500 text-white font-semibold text-xl py-3 px-4 rounded-lg hover:from-indigo-700 hover:to-purple-700 dark:hover:from-indigo-600 dark:hover:to-purple-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 transform transition-all duration-200 hover:scale-[1.01] shadow-lg disabled:opacity-50 disabled:cursor-not-allowed flex justify-center items-center"
@@ -184,7 +184,7 @@ const RegisterComponent: React.FC = () => {
             </button>
           </form>
 
-          {/* Footer */}
+          {/* ===============Footer============== */}
           <div className="mt-6 text-center">
             <p className="text-sm text-gray-600 dark:text-gray-400">
               Already have an account?{" "}

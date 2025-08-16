@@ -1,9 +1,11 @@
 "use client";
 import { motion } from "framer-motion";
+import { FaChalkboardTeacher, FaGlobe, FaUsers } from "react-icons/fa";
+import { LiaLaptopCodeSolid } from "react-icons/lia";
 
 const AboutUs = () => {
   return (
-    <section className="py-10 px-6 md:px-16">
+    <section className="py-10 px-6">
       <motion.h2
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -22,11 +24,110 @@ const AboutUs = () => {
         className="text-gray-300 max-w-2xl mx-auto mb-6 text-center"
       >
         <span className="font-semibold text-blue-400">MNA Web Programming</span>{" "}
-        is a cutting-edge IT agency committed to transforming your digital ideas
-        into reality. We specialize in delivering modern, responsive, and
-        performance-driven solutions for businesses of all sizes.
+        is a full-service <strong>Web Development Agency</strong> and an{" "}
+        <strong>Online Learning Platform</strong>, helping businesses grow
+        digitally and empowering individuals to become world-class developers.
       </motion.p>
+      {/* Company Values / Stats */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center px-4"
+      >
+        {[
+          {
+            icon: <LiaLaptopCodeSolid />,
+            title: "Web Solutions",
+            desc: "From websites to full-stack apps",
+          },
+          {
+            icon: <FaChalkboardTeacher />,
+            title: "Online Courses",
+            desc: "Interactive programming learning",
+          },
+          {
+            icon: <FaUsers />,
+            title: "Expert Team",
+            desc: "Skilled professionals & mentors",
+          },
+          {
+            icon: <FaGlobe />,
+            title: "Global Reach",
+            desc: "Serving clients & learners worldwide",
+          },
+        ].map((item, idx) => (
+          <div
+            key={idx}
+            className="bg-gray-800 rounded-xl shadow-lg px-2 py-3 hover:shadow-blue-500/30 hover:scale-[1.02] duration-300 hover:shadow-2xl transition"
+          >
+            <div className="flex justify-center items-center text-white mb-2">
+              <div className="border rounded-full text-7xl p-4">
+                {item.icon}
+              </div>
+            </div>
+            <h3 className="text-xl font-semibold text-blue-400 mb-1">
+              {item.title}
+            </h3>
+            <p className="text-gray-300">{item.desc}</p>
+          </div>
+        ))}
+      </motion.div>
+      {/* Timeline - Story */}
+      <div className="space-y-4 px-10 mt-6">
+        <motion.h3
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          className="text-3xl font-bold"
+        >
+          Our Journey
+        </motion.h3>
 
+        <div className="relative border-l-4 border-blue-500 pl-8 space-y-6">
+          {[
+            {
+              year: "2018",
+              title: "Founded as a Web Development Agency",
+              desc: "Started by passionate developers delivering modern websites & applications.",
+            },
+            {
+              year: "2020",
+              title: "Expanding into Full-Stack Solutions",
+              desc: "Became a trusted partner for startups & businesses with complete digital solutions.",
+            },
+            {
+              year: "2022",
+              title: "Launched Online Learning Platform",
+              desc: "Started offering professional web programming courses with real-world projects.",
+            },
+            {
+              year: "2024",
+              title: "Global Growth",
+              desc: "Now we serve clients worldwide and teach hundreds of learners every month.",
+            },
+          ].map((item, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, x: idx % 2 === 0 ? -80 : 80 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-xl shadow-md p-6 relative"
+            >
+              <span className="absolute -left-12 top-6 bg-blue-600 text-white font-bold px-3 py-1 rounded-lg">
+                {item.year}
+              </span>
+              <h4 className="text-xl font-semibold text-gray-900 mb-2">
+                {item.title}
+              </h4>
+              <p className="text-gray-600">{item.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -65,23 +166,23 @@ const AboutUs = () => {
             Our Mission
           </h3>
           <p className="text-gray-300">
-            Our mission is to empower individuals and businesses through
-            innovative and scalable software solutions. We also aim to nurture
-            future developers by providing high-quality, hands-on education.
+            To deliver <strong>innovative digital solutions</strong> and{" "}
+            <strong>empower learners</strong> by providing practical,
+            industry-level online courses in web development.
           </p>
         </div>
 
-        {/* Why Choose Us */}
+        {/* Our Vision */}
         <div className="bg-gray-800 rounded-xl shadow-lg p-6 hover:shadow-blue-500/30 hover:scale-[1.02] transition duration-300">
           <h3 className="text-xl font-semibold text-blue-400 mb-2">
-            Why Choose MNA?
+            Our Vision
           </h3>
-          <ul className="list-disc pl-5 text-gray-300 space-y-1">
-            <li>✔️ 100% Satisfaction Guarantee</li>
-            <li>✔️ On-time Delivery & Support</li>
-            <li>✔️ Modern Tools & Technologies</li>
-            <li>✔️ Affordable Pricing & Packages</li>
-          </ul>
+          <p className="text-gray-300">
+            To become a globally recognized{" "}
+            <strong>web development agency</strong> and the{" "}
+            <strong>number 1 online learning platform</strong> for aspiring
+            developers worldwide.
+          </p>
         </div>
       </motion.div>
 
