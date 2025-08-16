@@ -2,6 +2,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { MdMailOutline } from "react-icons/md";
+import backgroundBanner from "../../public/images/mna-web-programming-banner.png";
 
 const LockIcon: React.FC = () => (
   <svg
@@ -66,7 +67,16 @@ const LoginComponent: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen w-full flex items-center justify-center p-6">
+    <div
+      className="min-h-screen w-full flex items-center justify-center p-6"
+      style={{
+        backgroundImage: `url(${backgroundBanner.src})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
+      }}
+    >
       <div className="w-full max-w-md space-y-5 border p-6 rounded-lg shadow-lg bg-gray-50 dark:bg-gray-900">
         {/* Header */}
         <div className="text-center">
