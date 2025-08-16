@@ -3,6 +3,7 @@ import { journeyData } from "@/public/data/aboutUsDataBank";
 import { motion } from "framer-motion";
 import { FaChalkboardTeacher, FaGlobe, FaUsers } from "react-icons/fa";
 import { LiaLaptopCodeSolid } from "react-icons/lia";
+
 const CompanyValuesData = [
   {
     icon: <LiaLaptopCodeSolid />,
@@ -55,7 +56,10 @@ const AboutUs = () => {
         <strong>Online Learning Platform</strong>, helping businesses grow
         digitally and empowering individuals to become world-class developers.
       </motion.p>
-      {/* Company Values / Stats */}
+
+      {/* =====================
+      Company Values / Stats
+      ===================== */}
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -82,8 +86,11 @@ const AboutUs = () => {
           </div>
         ))}
       </motion.div>
-      {/* Timeline - Story */}
-      <div className="space-y-4 px-10 mt-6">
+
+      {/* =====================
+          Timeline - Story
+      ===================== */}
+      <div className="space-y-4 px-10 my-6">
         <motion.h3
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -115,6 +122,10 @@ const AboutUs = () => {
           ))}
         </div>
       </div>
+
+      {/* =====================
+          Company details
+      ===================== */}
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -147,7 +158,7 @@ const AboutUs = () => {
           </ul>
         </div>
 
-        {/* Mission */}
+        {/* ===========Mission============ */}
         <div className="bg-gray-800 rounded-xl shadow-lg p-6 hover:shadow-blue-500/30 hover:scale-[1.02] transition duration-300">
           <h3 className="text-xl font-semibold text-blue-400 mb-2">
             Our Mission
@@ -159,7 +170,7 @@ const AboutUs = () => {
           </p>
         </div>
 
-        {/* Our Vision */}
+        {/* ============Our Vision========== */}
         <div className="bg-gray-800 rounded-xl shadow-lg p-6 hover:shadow-blue-500/30 hover:scale-[1.02] transition duration-300">
           <h3 className="text-xl font-semibold text-blue-400 mb-2">
             Our Vision
