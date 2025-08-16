@@ -167,6 +167,14 @@ const AboutUs = () => {
             To deliver <strong>innovative digital solutions</strong> and{" "}
             <strong>empower learners</strong> by providing practical,
             industry-level online courses in web development.
+            <br />
+            <br />
+            We strive to bridge the gap between academic theory and real-world
+            practice, ensuring our students gain hands-on experience with the
+            latest technologies and frameworks. Our mission is to foster a
+            collaborative learning environment, support continuous professional
+            growth, and help businesses achieve digital excellence through
+            tailored web solutions and expert guidance.
           </p>
         </div>
 
@@ -180,6 +188,14 @@ const AboutUs = () => {
             <strong>web development agency</strong> and the{" "}
             <strong>number 1 online learning platform</strong> for aspiring
             developers worldwide.
+            <br />
+            <br />
+            We envision a future where anyone, regardless of background or
+            location, can access high-quality web programming education and
+            digital services. By continuously innovating our teaching methods
+            and expanding our global reach, we aim to inspire the next
+            generation of tech leaders, drive digital transformation for
+            organizations, and make a lasting impact on the world of technology.
           </p>
         </div>
       </motion.div>
