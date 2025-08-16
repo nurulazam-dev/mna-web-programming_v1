@@ -41,36 +41,42 @@ const AboutUs = () => {
             icon: <LiaLaptopCodeSolid />,
             title: "Web Solutions",
             desc: "From websites to full-stack apps",
+            gradient: "from-violet-700 to-blue-800",
           },
           {
             icon: <FaChalkboardTeacher />,
             title: "Online Courses",
             desc: "Interactive programming learning",
+            gradient: "from-blue-500 to-cyan-400",
           },
           {
             icon: <FaUsers />,
             title: "Expert Team",
             desc: "Skilled professionals & mentors",
+            gradient: "from-indigo-700 to-violet-600",
           },
           {
             icon: <FaGlobe />,
             title: "Global Reach",
             desc: "Serving clients & learners worldwide",
+            gradient: "from-orange-400 to-yellow-400",
           },
         ].map((item, idx) => (
           <div
             key={idx}
             className="bg-gray-800 rounded-xl shadow-lg px-2 py-3 hover:shadow-blue-500/30 hover:scale-[1.02] duration-300 hover:shadow-2xl transition"
           >
-            <div className="flex justify-center items-center text-white mb-2">
-              <div className="border rounded-full text-7xl p-4">
+            <div className="flex justify-center items-center text-white mb-1">
+              <div
+                className={`border rounded-full text-7xl p-4 bg-gradient-to-r ${item.gradient}`}
+              >
                 {item.icon}
               </div>
             </div>
-            <h3 className="text-xl font-semibold text-blue-400 mb-1">
+            <h3 className="text-xl font-semibold text-blue-400">
               {item.title}
             </h3>
-            <p className="text-gray-300">{item.desc}</p>
+            <p className="text-gray-400">{item.desc}</p>
           </div>
         ))}
       </motion.div>
@@ -115,15 +121,15 @@ const AboutUs = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="bg-white rounded-xl shadow-md p-6 relative"
+              className="bg-gray-800 rounded-xl shadow-lg p-6 hover:shadow-blue-500/30 hover:scale-[1.02] transition duration-300 relative"
             >
-              <span className="absolute -left-12 top-6 bg-blue-600 text-white font-bold px-3 py-1 rounded-lg">
+              <span className="absolute -left-12 top-6 bg-blue-500 text-white font-bold px-3 py-1 rounded-lg">
                 {item.year}
               </span>
-              <h4 className="text-xl font-semibold text-gray-900 mb-2">
+              <h4 className="text-xl font-semibold text-white mb-1">
                 {item.title}
               </h4>
-              <p className="text-gray-600">{item.desc}</p>
+              <p className="text-gray-400">{item.desc}</p>
             </motion.div>
           ))}
         </div>
