@@ -8,7 +8,7 @@ import Link from "next/link";
 import brandLogo from "../../../public/images/logo/MNA-WEB-PROGRAMMING.png";
 import StylistCustomButton from "./StylistCustomButton";
 
-const navLinks = ["Home", "Projects", "Courses", "About Us", "Contact Us"];
+const navLinks = ["Projects", "Courses", "About Us", "Contact Us"];
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
