@@ -10,6 +10,7 @@ import Testimonials from "./components/Home/Testimonials";
 import Workflow from "./components/Home/Workflow";
 import WhyWeAre from "./components/Home/WhyWeAre";
 import OurCourses from "./components/OurCourses";
+import ImageGallery from "./components/Home/ImageGallery";
 
 export default function HomePage() {
   return (
@@ -25,6 +26,7 @@ export default function HomePage() {
       <OurCourses />
       <FAQ />
       <Blog />
+      <ImageGallery />
       <ContactUs />
     </main>
   );
