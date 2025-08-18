@@ -54,23 +54,23 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link href="/about" className="hover:text-white">
+              <Link href="/about-us" className="hover:text-white">
                 About Us
               </Link>
             </li>
             <li>
-              <Link href="/services" className="hover:text-white">
-                Services
+              <Link href="/courses" className="hover:text-white">
+                Our Courses
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="hover:text-white">
-                Contact
+              <Link href="/contact-us" className="hover:text-white">
+                Contact Us
               </Link>
             </li>
             <li>
-              <Link href="/portfolio" className="hover:text-white">
-                Portfolio
+              <Link href="/projects" className="hover:text-white">
+                Projects
               </Link>
             </li>
           </ul>
@@ -81,16 +81,13 @@ const Footer = () => {
           <h3 className="text-lg font-bold text-white mb-4">Our Services</h3>
           <ul className="space-y-2 text-sm">
             <li>
-              <Link
-                href="/services/web-development"
-                className="hover:text-white"
-              >
-                Web Development
+              <Link href="/about-us" className="hover:text-white">
+                Web Design
               </Link>
             </li>
             <li>
-              <Link href="/services/mobile-apps" className="hover:text-white">
-                Mobile Apps
+              <Link href="/about-us" className="hover:text-white">
+                Web Development
               </Link>
             </li>
             <li>
@@ -99,8 +96,8 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link href="/services/devops" className="hover:text-white">
-                DevOps & Cloud
+              <Link href="/courses" className="hover:text-white">
+                Online Course
               </Link>
             </li>
           </ul>
@@ -113,15 +110,14 @@ const Footer = () => {
             <li>
               Email:{" "}
               <a
-                href="mailto:mnaofficialbd@gmail.com"
+                href="mailto:nurulazam.dev@gmail.com"
                 className="hover:text-white"
               >
-                mnaofficialbd@gmail.com
+                nurulazam.dev@gmail.com
               </a>
             </li>
-            <li>Phone: +880 1234 567 890</li>
-            <li>Phone: +880 1234 567 890</li>
-            <li>Address: Dhaka, Bangladesh</li>
+            <li>Phone: +880 1881 131834</li>
+            <li>Phone: +880 1830 086238</li>
           </ul>
 
           <div className="flex gap-2 mt-5 text-white text-xl">
