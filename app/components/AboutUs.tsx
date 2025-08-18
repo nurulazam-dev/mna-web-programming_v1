@@ -1,4 +1,5 @@
 "use client";
+
 import { journeyData } from "@/public/data/aboutUsDataBank";
 import { motion } from "framer-motion";
 import { FaChalkboardTeacher, FaGlobe, FaUsers } from "react-icons/fa";
