@@ -287,7 +287,7 @@ const OrbitingSkill = memo(({ config, angle }: OrbitingSkillProps) => {
     >
       <div
         className={`
-          relative w-full h-full p-2 bg-gray-800/90 backdrop-blur-sm
+          relative w-full h-full p-1 bg-gray-800/90 backdrop-blur-sm
           rounded-full flex items-center justify-center
           transition-all duration-300 cursor-pointer
           ${isHovered ? "scale-125 shadow-2xl" : "shadow-lg hover:shadow-xl"}
@@ -398,7 +398,7 @@ export default function OrbitingSkills() {
   ];
 
   return (
-    <main className="w-full flex items-center justify-center overflow-hidden p-10 pb-7">
+    <main className="w-full flex items-center justify-center overflow-hidden p-10 pb-5">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-0">
         <div
