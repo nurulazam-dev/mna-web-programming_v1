@@ -1,12 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
+// import Image from "next/image";
 import { FaCheckCircle } from "react-icons/fa";
-import brandLogo from "../../../public/images/logo/MNA-Web-Programming-logo.png";
-import TypewriterView from "../Shared/TypewriterView";
+// import brandLogo from "../../../public/images/logo/MNA-Web-Programming-logo.png";
+// import TypewriterView from "../Shared/TypewriterView";
 import ParticleTextView from "../Shared/ParticleTextView";
 import StylistCustomButton from "../Shared/StylistCustomButton";
+import OrbitingSkills from "./OrbitingSkills";
 
 const Hero = () => {
   return (
@@ -85,16 +86,16 @@ const Hero = () => {
           className="order-1 md:order-2 md:mt-0 mt-7"
           // className="flex justify-center relative"
         >
-          <TypewriterView />
+          {/* <TypewriterView /> */}
           <div className="mb-2 flex justify-center">
-            <Image
+            <OrbitingSkills />
+            {/*  <Image
               src={brandLogo}
               alt="MNA Web Programming"
               width={220}
               height={220}
-              // className="relative z-10 rounded-2xl shadow-2xl object-cover"
               priority
-            />
+            /> */}
           </div>
           <ParticleTextView />
           {/* <div className="absolute inset-0 bg-gradient-to-tr from-sky-200 via-transparent to-transparent rounded-full blur-3xl opacity-40" />
