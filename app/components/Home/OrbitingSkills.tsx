@@ -81,20 +81,20 @@ const iconComponents: Record<
     color: "#F7DF1E",
   },
   vsCode: {
-    component: () => <VscVscode className="text-[#F7DF1E] h-6 w-6" />,
-    color: "#F7DF1E",
+    component: () => <VscVscode className="text-[#096cc9] h-6 w-6" />,
+    color: "#096cc9",
   },
   firebase: {
-    component: () => <RiFirebaseFill className="text-[#F7DF1E] h-6 w-6" />,
-    color: "#F7DF1E",
+    component: () => <RiFirebaseFill className="text-[#ceb708] h-6 w-6" />,
+    color: "#ceb708",
   },
   github: {
-    component: () => <FaGithub className="text-[#F7DF1E] h-6 w-6" />,
-    color: "#F7DF1E",
+    component: () => <FaGithub className="text-[#faf9f4] h-6 w-6" />,
+    color: "#faf9f4",
   },
   react: {
-    component: () => <FaReact className="text-[#61DAFB] h-6 w-6" />,
-    color: "#61DAFB",
+    component: () => <FaReact className="text-[#09a5ff] h-6 w-6" />,
+    color: "#09a5ff",
   },
   mongodb: {
     component: () => <SiMongodb className="text-[#4DB33D] h-6 w-6" />,
@@ -109,16 +109,16 @@ const iconComponents: Record<
     color: "#06B6D4",
   },
   express: {
-    component: () => <SiExpress className="text-[#06B6D4] h-6 w-6" />,
-    color: "#06B6D4",
+    component: () => <SiExpress className="text-[#f5f7f8] h-6 w-6" />,
+    color: "#f5f7f8",
   },
   nextJs: {
-    component: () => <RiNextjsLine className="text-[#06B6D4] h-6 w-6" />,
-    color: "#06B6D4",
+    component: () => <RiNextjsLine className="text-[#f4f8f9] h-16 w-16" />,
+    color: "#f4f8f9",
   },
   git: {
-    component: () => <FaGitAlt className="text-[#06B6D4] h-6 w-6" />,
-    color: "#06B6D4",
+    component: () => <FaGitAlt className="text-[#a70404] h-6 w-6" />,
+    color: "#a70404",
   },
 };
 
@@ -131,7 +131,7 @@ SkillIcon.displayName = "SkillIcon";
 
 // --- Configuration for the Orbiting Skills ---
 const skillsConfig: SkillConfig[] = [
-  // Inner Orbit (3 icons)
+  // Inner Orbit (5 icons, evenly spaced)
   {
     id: "html",
     orbitRadius: 115,
@@ -148,7 +148,7 @@ const skillsConfig: SkillConfig[] = [
     size: 42,
     speed: 1,
     iconType: "css",
-    phaseShift: (2 * Math.PI) / 3,
+    phaseShift: (2 * Math.PI) / 5,
     glowColor: "cyan",
     label: "CSS3",
   },
@@ -158,7 +158,7 @@ const skillsConfig: SkillConfig[] = [
     size: 40,
     speed: 1,
     iconType: "javascript",
-    phaseShift: (4 * Math.PI) / 3,
+    phaseShift: (4 * Math.PI) / 5,
     glowColor: "cyan",
     label: "JavaScript",
   },
@@ -168,7 +168,7 @@ const skillsConfig: SkillConfig[] = [
     size: 40,
     speed: 1,
     iconType: "vsCode",
-    phaseShift: (4 * Math.PI) / 3,
+    phaseShift: (6 * Math.PI) / 5,
     glowColor: "cyan",
     label: "VS Code",
   },
@@ -178,21 +178,12 @@ const skillsConfig: SkillConfig[] = [
     size: 40,
     speed: 1,
     iconType: "firebase",
-    phaseShift: (4 * Math.PI) / 3,
+    phaseShift: (8 * Math.PI) / 5,
     glowColor: "cyan",
     label: "Firebase",
   },
-  {
-    id: "github",
-    orbitRadius: 115,
-    size: 40,
-    speed: 1,
-    iconType: "github",
-    phaseShift: (4 * Math.PI) / 3,
-    glowColor: "cyan",
-    label: "GitHub",
-  },
-  // Outer Orbit (7 icons, evenly spaced)
+
+  // Outer Orbit (8 icons, evenly spaced)
   {
     id: "react",
     orbitRadius: 160,
@@ -209,7 +200,7 @@ const skillsConfig: SkillConfig[] = [
     size: 43,
     speed: -0.5,
     iconType: "mongodb",
-    phaseShift: (2 * Math.PI) / 7,
+    phaseShift: (2 * Math.PI) / 8,
     glowColor: "purple",
     label: "MongoDB",
   },
@@ -219,7 +210,7 @@ const skillsConfig: SkillConfig[] = [
     size: 45,
     speed: -0.5,
     iconType: "node",
-    phaseShift: (4 * Math.PI) / 7,
+    phaseShift: (4 * Math.PI) / 8,
     glowColor: "purple",
     label: "Node.js",
   },
@@ -229,7 +220,7 @@ const skillsConfig: SkillConfig[] = [
     size: 40,
     speed: -0.5,
     iconType: "tailwind",
-    phaseShift: (6 * Math.PI) / 7,
+    phaseShift: (6 * Math.PI) / 8,
     glowColor: "purple",
     label: "Tailwind CSS",
   },
@@ -239,7 +230,7 @@ const skillsConfig: SkillConfig[] = [
     size: 40,
     speed: -0.5,
     iconType: "express",
-    phaseShift: (8 * Math.PI) / 7,
+    phaseShift: (8 * Math.PI) / 8,
     glowColor: "purple",
     label: "Express.js",
   },
@@ -249,7 +240,7 @@ const skillsConfig: SkillConfig[] = [
     size: 42,
     speed: -0.5,
     iconType: "nextJs",
-    phaseShift: (10 * Math.PI) / 7,
+    phaseShift: (10 * Math.PI) / 8,
     glowColor: "purple",
     label: "Next.js",
   },
@@ -259,9 +250,19 @@ const skillsConfig: SkillConfig[] = [
     size: 40,
     speed: -0.5,
     iconType: "git",
-    phaseShift: (12 * Math.PI) / 7,
+    phaseShift: (12 * Math.PI) / 8,
     glowColor: "purple",
     label: "Git",
+  },
+  {
+    id: "github",
+    orbitRadius: 160,
+    size: 40,
+    speed: -0.5,
+    iconType: "github",
+    phaseShift: (14 * Math.PI) / 8,
+    glowColor: "purple",
+    label: "GitHub",
   },
 ];
 
