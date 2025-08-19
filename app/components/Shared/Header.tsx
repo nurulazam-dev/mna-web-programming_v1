@@ -52,7 +52,9 @@ const Header = () => {
           </motion.div>
         </Link>
 
-        {/* Desktop Navigation */}
+        {/* ====================
+             Desktop Navigation
+           ==================== */}
         <nav className="hidden md:flex space-x-10 md:items-center">
           {navLinks?.map((link, idx) => (
             <motion.a
@@ -64,10 +66,18 @@ const Header = () => {
               <span className="absolute left-0 bottom-[-4px] w-0 h-[2px] bg-gradient-to-r from-blue-500 to-purple-500 transition-all group-hover:w-full"></span>
             </motion.a>
           ))}
-          <StylistCustomButton customLink="/login" buttonText="Login" />
         </nav>
 
-        {/* Mobile Menu Button */}
+        {/* ====================
+          Login Button
+        ==================== */}
+        <div className="hidden md:flex items-center space-x-4">
+          <StylistCustomButton customLink="/login" buttonText="Login" />
+        </div>
+
+        {/* ====================
+          Mobile Menu Button
+        ==================== */}
         <motion.button
           whileTap={{ scale: 0.9 }}
           className="md:hidden text-3xl text-gray-800 dark:text-gray-200"
@@ -77,7 +87,9 @@ const Header = () => {
         </motion.button>
       </div>
 
-      {/* Mobile Navigation Drawer */}
+      {/* ======================== 
+        Mobile Navigation Drawer 
+      ========================== */}
       <AnimatePresence>
         {isOpen && (
           <>
