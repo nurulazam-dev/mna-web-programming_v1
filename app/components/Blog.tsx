@@ -28,7 +28,7 @@ const posts = [
     image:
       "https://nurulazam-dev.web.app/assets/dimand_web_development-xR-iwXVL.jpeg",
   },
-  {
+  /*   {
     title: "The Power of Personal Branding",
     date: "June 15, 2025",
     summary:
@@ -51,7 +51,7 @@ const posts = [
       "Designing for accessibility is not just ethical — it’s smart business. Learn best practices to make your site usable for everyone.",
     image:
       "https://nurulazam-dev.web.app/assets/dimand_web_development-xR-iwXVL.jpeg",
-  },
+  }, */
 ];
 
 const Blog = () => {

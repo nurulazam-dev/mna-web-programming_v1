@@ -84,30 +84,12 @@ const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           className="order-1 md:order-2 md:mt-0 mt-7"
-          // className="flex justify-center relative"
         >
           {/* <TypewriterView /> */}
-          <div className="mb-2 flex justify-center">
+          <div className="mb-1 flex justify-center">
             <OrbitingSkills />
-            {/*  <Image
-              src={brandLogo}
-              alt="MNA Web Programming"
-              width={220}
-              height={220}
-              priority
-            /> */}
           </div>
           <ParticleTextView />
-          {/* <div className="absolute inset-0 bg-gradient-to-tr from-sky-200 via-transparent to-transparent rounded-full blur-3xl opacity-40" />
-            <Image
-            src={heroImage}
-            alt="Hero Banner"
-            width={520}
-            height={520}
-            className="relative z-10 rounded-2xl shadow-2xl object-cover"
-            priority
-          /> 
-          <ParticleView /> */}
         </motion.div>
       </div>
     </section>

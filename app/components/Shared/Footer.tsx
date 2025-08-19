@@ -4,7 +4,6 @@ import Link from "next/link";
 import {
   FaFacebookF,
   FaLinkedinIn,
-  FaTwitter,
   FaGithub,
   FaInstagram,
   FaYoutube,
@@ -149,13 +148,7 @@ const Footer = () => {
             >
               <FaInstagram />
             </a>
-            <a
-              href="https://twitter.com/nurulazam_dev"
-              target="_blank"
-              className="text-sky-400 hover:text-cyan-50 border border-white p-1 rounded-full"
-            >
-              <FaTwitter />
-            </a>
+
             <a
               href="https://tiktok.com/@nurulazam_dev"
               target="_blank"

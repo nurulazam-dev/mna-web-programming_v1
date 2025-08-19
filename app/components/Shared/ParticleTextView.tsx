@@ -77,11 +77,13 @@ const ParticleText: React.FC<ParticleTextProps> = ({
           duration: 1,
           ease: "easeOut",
         }}
-        className="text-4xl md:text-6xl font-bold text-slate-800 dark:text-slate-200 relative z-10 text-center"
-        style={{
-          textShadow: `0 0 20px ${particleColor}40`,
-          filter: `drop-shadow(0 0 10px ${particleColor}60)`,
-        }}
+        className="text-4xl md:text-6xl font-bold text-slate-200 relative z-10 text-center"
+        style={
+          {
+            // textShadow: `0 0 20px ${particleColor}40`,
+            // filter: `drop-shadow(0 0 10px ${particleColor}60)`,
+          }
+        }
       >
         {text}
       </motion.div>

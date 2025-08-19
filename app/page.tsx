@@ -10,13 +10,11 @@ import Testimonials from "./components/Home/Testimonials";
 import Workflow from "./components/Home/Workflow";
 import WhyWeAre from "./components/Home/WhyWeAre";
 import OurCourses from "./components/OurCourses";
-import OrbitingSkills from "./components/Home/OrbitingSkills";
 
 export default function HomePage() {
   return (
     <main>
       <Hero />
-      <OrbitingSkills />
       <WhyWeAre />
       <Services />
       <Portfolio />
