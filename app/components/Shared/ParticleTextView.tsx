@@ -77,7 +77,7 @@ const ParticleText: React.FC<ParticleTextProps> = ({
           duration: 1,
           ease: "easeOut",
         }}
-        className="text-4xl md:text-6xl font-bold text-slate-200 relative z-10 text-center"
+        className="text-[2.1rem] md:text-[2.7rem] font-bold text-slate-200 relative z-10 text-center"
         style={
           {
             // textShadow: `0 0 20px ${particleColor}40`,

@@ -86,10 +86,12 @@ const Hero = () => {
           className="order-1 md:order-2 md:mt-0 mt-7"
         >
           {/* <TypewriterView /> */}
-          <div className="mb-1 flex justify-center">
+          <div className="flex justify-center">
             <OrbitingSkills />
           </div>
-          <ParticleTextView />
+          <div className="flex justify-center">
+            <ParticleTextView />
+          </div>
         </motion.div>
       </div>
     </section>
