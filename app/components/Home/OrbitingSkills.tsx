@@ -2,20 +2,38 @@
 import React, { useEffect, useState, memo } from "react";
 import brandLogo from "../../../public/images/logo/MNA-Web-Programming-logo.png";
 import Image from "next/image";
-import { FaCss3, FaHtml5, FaNodeJs, FaReact } from "react-icons/fa";
-import { RiTailwindCssFill } from "react-icons/ri";
+import {
+  FaCss3,
+  FaGitAlt,
+  FaGithub,
+  FaHtml5,
+  FaNodeJs,
+  FaReact,
+} from "react-icons/fa";
+import {
+  RiFirebaseFill,
+  RiNextjsLine,
+  RiTailwindCssFill,
+} from "react-icons/ri";
 import { TbBrandJavascript } from "react-icons/tb";
-import { SiMongodb } from "react-icons/si";
+import { SiExpress, SiMongodb } from "react-icons/si";
+import { VscVscode } from "react-icons/vsc";
 
 // --- Type Definitions ---
 type IconType =
   | "html"
   | "css"
   | "javascript"
+  | "vsCode"
+  | "firebase"
+  | "github"
   | "react"
   | "mongodb"
   | "node"
-  | "tailwind";
+  | "tailwind"
+  | "express"
+  | "nextJs"
+  | "git";
 
 type GlowColor = "cyan" | "purple";
 
@@ -62,6 +80,18 @@ const iconComponents: Record<
     component: () => <TbBrandJavascript className="text-[#F7DF1E] h-6 w-6" />,
     color: "#F7DF1E",
   },
+  vsCode: {
+    component: () => <VscVscode className="text-[#F7DF1E] h-6 w-6" />,
+    color: "#F7DF1E",
+  },
+  firebase: {
+    component: () => <RiFirebaseFill className="text-[#F7DF1E] h-6 w-6" />,
+    color: "#F7DF1E",
+  },
+  github: {
+    component: () => <FaGithub className="text-[#F7DF1E] h-6 w-6" />,
+    color: "#F7DF1E",
+  },
   react: {
     component: () => <FaReact className="text-[#61DAFB] h-6 w-6" />,
     color: "#61DAFB",
@@ -78,6 +108,18 @@ const iconComponents: Record<
     component: () => <RiTailwindCssFill className="text-[#06B6D4] h-6 w-6" />,
     color: "#06B6D4",
   },
+  express: {
+    component: () => <SiExpress className="text-[#06B6D4] h-6 w-6" />,
+    color: "#06B6D4",
+  },
+  nextJs: {
+    component: () => <RiNextjsLine className="text-[#06B6D4] h-6 w-6" />,
+    color: "#06B6D4",
+  },
+  git: {
+    component: () => <FaGitAlt className="text-[#06B6D4] h-6 w-6" />,
+    color: "#06B6D4",
+  },
 };
 
 // --- Memoized Icon Component ---
@@ -89,7 +131,7 @@ SkillIcon.displayName = "SkillIcon";
 
 // --- Configuration for the Orbiting Skills ---
 const skillsConfig: SkillConfig[] = [
-  // Inner Orbit
+  // Inner Orbit (3 icons)
   {
     id: "html",
     orbitRadius: 115,
@@ -120,7 +162,37 @@ const skillsConfig: SkillConfig[] = [
     glowColor: "cyan",
     label: "JavaScript",
   },
-  // Outer Orbit
+  {
+    id: "vsCode",
+    orbitRadius: 115,
+    size: 40,
+    speed: 1,
+    iconType: "vsCode",
+    phaseShift: (4 * Math.PI) / 3,
+    glowColor: "cyan",
+    label: "VS Code",
+  },
+  {
+    id: "firebase",
+    orbitRadius: 115,
+    size: 40,
+    speed: 1,
+    iconType: "firebase",
+    phaseShift: (4 * Math.PI) / 3,
+    glowColor: "cyan",
+    label: "Firebase",
+  },
+  {
+    id: "github",
+    orbitRadius: 115,
+    size: 40,
+    speed: 1,
+    iconType: "github",
+    phaseShift: (4 * Math.PI) / 3,
+    glowColor: "cyan",
+    label: "GitHub",
+  },
+  // Outer Orbit (7 icons, evenly spaced)
   {
     id: "react",
     orbitRadius: 160,
@@ -137,7 +209,7 @@ const skillsConfig: SkillConfig[] = [
     size: 43,
     speed: -0.5,
     iconType: "mongodb",
-    phaseShift: 0,
+    phaseShift: (2 * Math.PI) / 7,
     glowColor: "purple",
     label: "MongoDB",
   },
@@ -147,7 +219,7 @@ const skillsConfig: SkillConfig[] = [
     size: 45,
     speed: -0.5,
     iconType: "node",
-    phaseShift: (2 * Math.PI) / 3,
+    phaseShift: (4 * Math.PI) / 7,
     glowColor: "purple",
     label: "Node.js",
   },
@@ -157,9 +229,39 @@ const skillsConfig: SkillConfig[] = [
     size: 40,
     speed: -0.5,
     iconType: "tailwind",
-    phaseShift: (4 * Math.PI) / 3,
+    phaseShift: (6 * Math.PI) / 7,
     glowColor: "purple",
     label: "Tailwind CSS",
+  },
+  {
+    id: "express",
+    orbitRadius: 160,
+    size: 40,
+    speed: -0.5,
+    iconType: "express",
+    phaseShift: (8 * Math.PI) / 7,
+    glowColor: "purple",
+    label: "Express.js",
+  },
+  {
+    id: "nextJs",
+    orbitRadius: 160,
+    size: 42,
+    speed: -0.5,
+    iconType: "nextJs",
+    phaseShift: (10 * Math.PI) / 7,
+    glowColor: "purple",
+    label: "Next.js",
+  },
+  {
+    id: "git",
+    orbitRadius: 160,
+    size: 40,
+    speed: -0.5,
+    iconType: "git",
+    phaseShift: (12 * Math.PI) / 7,
+    glowColor: "purple",
+    label: "Git",
   },
 ];
 
